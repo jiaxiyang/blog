@@ -16,3 +16,11 @@ tags:
 
 ## write blog
 1. [markdown tutorial](https://guides.github.com/features/mastering-markdown/)
+
+```
+int main() {
+    string test;
+    cout << "hello world" << endl;
+    return 0;
+}
+```
