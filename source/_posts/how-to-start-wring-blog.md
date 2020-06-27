@@ -1,10 +1,9 @@
 ---
-title:
+title: How to start writing blog
 date: 2020-06-26 14:52:10
 tags:
 ---
 
-# how to set your own blog web set
 ## set up githubio
 1. follow [github pages guide](https://guides.github.com/features/pages/)
 
@@ -21,4 +20,4 @@ tags:
 
 
 ## push blog to githubio
-1. [hexo tutorial](https://hexo.io/zh-cn/docs/github-pages)
+1. [hexo tutorial](https://hexo.io/zh-cn/docs/one-command-deployment)
