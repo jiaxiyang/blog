@@ -10,6 +10,8 @@ tags:
 
 ## use hexo (or JylyII)
 1. [ubuntu16.04 nodejs install](https://github.com/nodesource/distributions/blob/master/README.md)
+   * need sudo to use npm install packages
+   * [npm error solve](https://www.jianshu.com/p/3fd7d90db01a)
 2. [hexo tutorial](https://hexo.io/zh-cn/)
 3. [hexo theme 3-hexo](https://github.com/yelog/hexo-theme-3-hexo)
 4. [3-hexo tutorial](https://yelog.org/2017/03/23/3-hexo-instruction/)
@@ -17,10 +19,6 @@ tags:
 ## write blog
 1. [markdown tutorial](https://guides.github.com/features/mastering-markdown/)
 
-```
-int main() {
-    string test;
-    cout << "hello world" << endl;
-    return 0;
-}
-```
+
+## push blog to githubio
+1. [hexo tutorial](https://hexo.io/zh-cn/docs/github-pages)

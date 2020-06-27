@@ -65,7 +65,7 @@ shortcutKey: true
 menu:
   about:  # '关于' 按钮
     on: true # 是否显示
-    url: /about  # 跳转链接
+    url: https://jiaxiyang.github.io/  # 跳转链接
     type: 1 # 跳转类型 1：站内异步跳转 2：当前页面跳转 3：打开新的tab页
   friend: # '友链' 按钮
     on: true # 是否展示
@@ -174,7 +174,7 @@ img_resize: default
 
 # 代码段高亮样式，markdown 语法 `demo`
 code:
-  theme: dark-red
+  theme: github
 # 支持主题：
 # dark-red: 红字(默认)
 # github: github样式（灰色底，黑字）
@@ -182,7 +182,7 @@ code:
 highlight:
   on: true # true开启代码高亮
   lineNum: false # true显示行号
-  theme: darcula
+  theme: github
 # 代码高亮主题,效果可以查看 https://highlightjs.org/static/demo/
 # 支持主题：
 # sublime : 参考sublime的高亮主题
@@ -223,7 +223,7 @@ mermaid:
 
 # 友情链接
 friends:
-  叶落阁: http://yelog.org/
+  贾夕阳: https://jiaxiyang.github.io/
 
 ##########评论设置#############
 comment:
@@ -240,11 +240,11 @@ disqus:
 
 
 gitalk:
-  githubID: yelog
-  repo: yelog.github.io
+  githubID: jiaxiyang
+  repo: jiaxiyang.github.io
   ClientID:
   ClientSecret:
-  adminUser: yelog
+  adminUser: jiaxiyang
   distractionFreeMode: true
   language: zh-CN
   perPage: 10
@@ -261,8 +261,8 @@ gitalk:
 
 
 gitment:
-  owner: yelog
-  repo: yelog.github.io
+  owner: jiaxiyang
+  repo: jiaxiyang.github.io
   client_id:
   client_secret:
   # gitment : 通过github issue实现的评论系统
