@@ -11,7 +11,7 @@ tags:
 ## Set up githubio
 1. Follow [github pages guide](https://guides.github.com/features/pages/) to apply a web.
 
-## Use hexo (or JylyII)
+## Use hexo (or JekyII)
 1. [ubuntu16.04 nodejs install](https://github.com/nodesource/distributions/blob/master/README.md)
    * Need sudo to use npm install packages.
    * [npm install error solve](https://www.jianshu.com/p/3fd7d90db01a)
