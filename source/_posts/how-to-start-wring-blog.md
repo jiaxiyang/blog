@@ -24,25 +24,21 @@ tags:
 
 ## hexo basic comamnd
 1.  Create a new post
-
 ``` bash
 $ hexo new "My New Post"
 ```
 
 2. Run server
-
 ``` bash
 $ hexo server
 ```
 
 3. Generate static files
-
 ``` bash
 $ hexo generate
 ```
 
 4. Deploy to remote sites
-
 ``` bash
 $ hexo clean && hexo deploy
 ```

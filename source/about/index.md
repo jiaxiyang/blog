@@ -8,5 +8,5 @@ date: 2020-06-27 13:54:48
 毕业于北京理工大学，目前从事人工智能软件架构工作
 
 ## 联系方式
-1. mail: jiaxiyangbit@163.com
+1. mail: jiaxiyangbit@126.com
 2. qq: 312567150
