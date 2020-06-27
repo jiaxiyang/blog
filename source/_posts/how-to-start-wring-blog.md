@@ -21,3 +21,33 @@ tags:
 
 ## push blog to githubio
 1. [hexo tutorial](https://hexo.io/zh-cn/docs/one-command-deployment)
+
+## hexo basic comamnd
+1.  Create a new post
+
+``` bash
+$ hexo new "My New Post"
+```
+
+2. Run server
+
+``` bash
+$ hexo server
+```
+
+3. Generate static files
+
+``` bash
+$ hexo generate
+```
+
+4. Deploy to remote sites
+
+``` bash
+$ hexo clean && hexo deploy
+```
+5. shortcuts
+``` bash
+alias hs='hexo clean && hexo g && hexo s'
+alias hd='hexo clean && hexo g && hexo d && git add . && git commit -m "update" && git push -f'
+```
