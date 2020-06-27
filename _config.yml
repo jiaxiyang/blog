@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Jia Xiyang
 subtitle: ''
 description: ''
 keywords:
@@ -100,6 +100,6 @@ theme: 3-hexo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/jiaxiyang/jiaxiyang.github.io.git
+  repo: git@github.com:jiaxiyang/jiaxiyang.github.io.git
   branch: master
   message: update
