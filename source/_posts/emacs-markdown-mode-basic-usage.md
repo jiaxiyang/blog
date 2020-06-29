@@ -2,11 +2,11 @@
 title: Emacs markdown mode basic usage
 date: 2020-06-28 21:24:32
 categories:
-- tools
-- emacs
+- Tools
+- Emacs
 tags:
-- emacs
-- markdown
+- Emacs
+- Markdown
 ---
 
 ## Keybindings

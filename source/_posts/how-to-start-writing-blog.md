@@ -2,10 +2,10 @@
 title: How to start writing blog
 date: 2020-06-26 14:52:10
 categories:
-- tools
-- blog
+- Tools
+- Blog
 tags:
-- blog
+- Blog
 ---
 
 ## Set up githubio
