@@ -2,7 +2,7 @@
 title: Links
 date: 2020-06-29 12:48:48
 categories:
-- tools
+- Summary
 tags:
 - links
 ---
@@ -15,7 +15,7 @@ tags:
 5. [Github Git](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 6. [Matlab](http://sites.nd.edu/gfu/files/2019/07/cheatsheet.pdf)
 
-## git
+## Git
 1. [Git Book](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
 2. [Git Internals: the most important concept](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
 3. [Useful Git Commands](https://zhuanlan.zhihu.com/p/132573100)
