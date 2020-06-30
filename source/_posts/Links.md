@@ -20,3 +20,6 @@ tags:
 1. [Git Book](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
 2. [Git Internals: the most important concept](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
 3. [Useful Git Commands](https://zhuanlan.zhihu.com/p/132573100)
+
+## Awesome
+1. [Awesome](https://github.com/sindresorhus/awesome)

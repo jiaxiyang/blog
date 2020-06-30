@@ -11,9 +11,15 @@ tags:
 ## Useful Tools
 1. [tmux](https://github.com/tmux/tmux/wiki)
 1. [z.lua(zh)](https://github.com/skywind3000/z.lua)
+   - zh: grep directory
+   - zh foo: auto jump to foo directory
+   - C-r: grep history
 1. [fzf](https://github.com/junegunn/fzf)
 1. [rg](https://github.com/BurntSushi/ripgrep)
 1. [fd](https://github.com/sharkdp/fd)
+
+## Shortcuts
+
 
 ## Miscellaneous
 1. `cat url-list.txt | xargs wget -c`xargs将参数列表转换成小块分段传递给其他命令
@@ -71,3 +77,9 @@ tags:
 1. `sshpass -p root（密码） ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@10.10.129.22 '/etc/init.d/led start'`  跨机器执行命令 在机器A上调用，在机器B上执行，将结果输出到A上。
 1. `sshpass -p root（密码） ssh(scp) -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@10.10.129.22   ssh -y -y  root@zu9-2  " ' cd /home && ls'"  `zu9 上执行 cd /home && ls 注意  要同时加双引号和单引号。`sshpass -p jiaxiyang scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null static_ip.txt jiaxiyang@10.10.0.96:~`
 1. `tar -cf - zu9_test | sshpass -p root ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@10.10.129.133 ssh -y -y zu9-2 tar -xvf - -C /var`  跨机器cp文件并免密
+
+## Links and Reference
+1. [The art of command line](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
+1. [Awesome shell](https://github.com/alebcay/awesome-shell)
+1. [Awesome bash](https://github.com/awesome-lists/awesome-bash)
+1. [Bash cheatsheet](https://github.com/zhouyiqi91/awesome-cheatsheets/blob/master/languages/bash.sh)
