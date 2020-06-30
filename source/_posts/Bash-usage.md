@@ -9,10 +9,11 @@ tags:
 ---
 
 ## Useful Tools
+1. [tmux](https://github.com/tmux/tmux/wiki)
 1. [z.lua(zh)](https://github.com/skywind3000/z.lua)
-2. [fzf](https://github.com/junegunn/fzf)
-3. [rg](https://github.com/BurntSushi/ripgrep)
-4. [fd](https://github.com/sharkdp/fd)
+1. [fzf](https://github.com/junegunn/fzf)
+1. [rg](https://github.com/BurntSushi/ripgrep)
+1. [fd](https://github.com/sharkdp/fd)
 
 ## Miscellaneous
 1. `cat url-list.txt | xargs wget -c`xargs将参数列表转换成小块分段传递给其他命令
@@ -40,12 +41,12 @@ tags:
 1. `ln -s   source  target`   创建软连接
 1. ln 非常有用，可以使用ln来重新命名文件，可以提供一层虚拟层，文件名字路径改变只需重新链接一下，上层代码不用改变。例如xilinx所有硬盘都连接到 /proj/rdi/staff/xiyang 方便操作
 1. `watch -d -n 1 ./Re   reg` 每隔1秒查看程序变化
-1. `axel -n 15（线程数）URL`     多线程下载
+1. `axel -n 15（线程数）URL` 多线程下载
 1. `apt-cache search trash`  搜索安装包
 1. `ldconfig -p `查看系统安装的库
 1. `ldconfig -p | grep pcap` 查看系统是否安装pcap
 1.  `pkg-config --modversion poppler-data` 查看库版本 , pkg-confg配置文件在/usr/share/pkgconfig下(pkg-config一般为开发者使用，文件系统中勾选-dev)
-1. `sudo dpkg --install atom-amd64.deb`   dpkg安装.deb软件包
+1. `sudo dpkg --install atom-amd64.deb` dpkg安装.deb软件包
 1. `export PATH="/home/zxy/Desktop:$PATH"`   添加环境变量
 1. `linuxlogo` 命令行显示linux logo
 1. `sudo mount -t tmpfs -o size=8G tmpfs ramdisk/` 创建内存文件系统， 可以加快程序运行时间。
@@ -68,5 +69,5 @@ tags:
 1.  `SCRIPT_PATH=$(dirname  $(realpath xx.sh)) ` 比pwd要好，pwd显示的是虚拟链接地址。
 1.  `PROJECT_NAME=$(basename $(SCPRIT_PATH))` 当前脚本所在的工程名字
 1. `sshpass -p root（密码） ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@10.10.129.22 '/etc/init.d/led start'`  跨机器执行命令 在机器A上调用，在机器B上执行，将结果输出到A上。
-1. `sshpass -p root（密码） ssh(scp) -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@10.10.129.22   ssh -y -y  root@zu9-2  " ' cd /home && ls'"  `zu9 上执行 cd /home && ls 注意  要同时加双引号和单引号。sshpass -p jiaxiyang scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null static_ip.txt jiaxiyang@10.10.0.96:~
+1. `sshpass -p root（密码） ssh(scp) -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@10.10.129.22   ssh -y -y  root@zu9-2  " ' cd /home && ls'"  `zu9 上执行 cd /home && ls 注意  要同时加双引号和单引号。`sshpass -p jiaxiyang scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null static_ip.txt jiaxiyang@10.10.0.96:~`
 1. `tar -cf - zu9_test | sshpass -p root ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@10.10.129.133 ssh -y -y zu9-2 tar -xvf - -C /var`  跨机器cp文件并免密
