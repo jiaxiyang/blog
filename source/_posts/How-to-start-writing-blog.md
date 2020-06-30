@@ -27,26 +27,17 @@ tags:
 
 ## Hexo basic comamnd
 1. Create a new post
-``` bash
-$ hexo new "My New Post"
-```
+   `$ hexo new "My New Post"`
 
 2. Run server
-``` bash
-$ hexo server
-```
+   `$ hexo server`
 
 3. Generate static files
-``` bash
-$ hexo generate
-```
+   `$ hexo generate`
 
 4. Deploy to remote sites
-``` bash
-$ hexo clean && hexo deploy
-```
+   `$ hexo clean && hexo deploy`
+
 5. shortcuts
-``` bash
-alias hs='hexo clean && hexo g && hexo s'
-alias hd='hexo clean && hexo g && hexo d && git add . && git commit -m "update" && git push -f'
-```
+   `alias hs='hexo clean && hexo g && hexo s'`
+   `alias hd='hexo clean && hexo g && hexo d && git add . && git commit -m "update" && git push -f'`
