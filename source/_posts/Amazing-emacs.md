@@ -20,7 +20,7 @@ tags:
 1. expand region
 1. snippets
 1. help mans
-1. M-x: you can use commands to do every thing
+1. M-x: you can use commands to do everything
 1. magit
 1. counsel buffers and files
 1. ibuffer

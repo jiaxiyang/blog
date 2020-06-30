@@ -1,5 +1,5 @@
 ---
-title: Bash_usage
+title: Bash usage
 date: 2020-06-29 20:39:09
 categories:
 - Tools
