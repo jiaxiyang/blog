@@ -17,16 +17,16 @@ tags:
 7. [Matlab](http://sites.nd.edu/gfu/files/2019/07/cheatsheet.pdf)
 
 ## Emacs
+1. [GNU Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
+1. [Tour Of Emacs](https://www.gnu.org/software/emacs/tour/index.html)
 1. [My Config](https://github.com/jiaxiyang/100ms_dot_emacs)
 1. [My Leader Key](https://github.com/jiaxiyang/leader-key-mode/blob/master/leader-key-mode.el)
 1. [Wcy Config](https://github.com/wcy123/100ms_dot_emacs)
-1. [GNU Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
-1. [Tour Of Emacs](https://www.gnu.org/software/emacs/tour/index.html)
-1. [Melpa](http://melpa.org/)
-1. [Emacs China](https://emacs-china.org/)
-1. [Zamansky Tutorial](https://cestlaz.github.io/stories/emacs/)
 1. [Zamansky Config](https://github.com/zamansky/dot-emacs)
+1. [Zamansky Tutorial](https://cestlaz.github.io/stories/emacs/)
+1. [Emacs China](https://emacs-china.org/)
 1. [Emacs Pinky](http://ergoemacs.org/emacs/emacs_pinky_2020.html)
+1. [Melpa](http://melpa.org/)
 1. [Org Mode](https://orgmode.org/)
 
 ## Git
