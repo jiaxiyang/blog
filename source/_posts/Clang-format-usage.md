@@ -39,7 +39,7 @@ function! Formatonsave()
   pyfile /usr/local/share/clang/clang-format.py
   " py3file /usr/local/share/clang/clang-format.py
 endfunction
-autocmd BufWritePre *.h, *.hpp, *.cc, *.cpp call Formatonsave()
+autocmd BufWritePre *.h,*.hpp,*.cc,*.cpp call Formatonsave()
 
 ```
 
