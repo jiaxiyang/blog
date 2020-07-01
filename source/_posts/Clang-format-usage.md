@@ -32,12 +32,12 @@ tags:
 
 ```
 function! Formatonsave()
-    let l:lines = 'all'
-    let l:formatdiff = 1
-    let g:clang_format_fallback_style = 'Google'
-    " Remember to repalce the path of clang-format.py
-    pyfile /usr/local/share/clang/clang-format.py
-    " py3file /usr/local/share/clang/clang-format.py
+  let l:lines = 'all'
+  let l:formatdiff = 1
+  let g:clang_format_fallback_style = 'Google'
+  " Remember to repalce the path of clang-format.py
+  pyfile /usr/local/share/clang/clang-format.py
+  " py3file /usr/local/share/clang/clang-format.py
 endfunction
 autocmd BufWritePre *.h, *.hpp, *.cc, *.cpp call Formatonsave()
 
