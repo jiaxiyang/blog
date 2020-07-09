@@ -16,5 +16,6 @@ tags:
 ## Links
 1. [Officail website](https://www.rust-lang.org/)
 1. [Rust book](https://doc.rust-lang.org/book/)
+1. [Cargo book](https://doc.rust-lang.org/cargo/)
 1. [Rust examples](https://doc.rust-lang.org/stable/rust-by-example/)
 1. [Rust online programming](https://play.rust-lang.org/)
