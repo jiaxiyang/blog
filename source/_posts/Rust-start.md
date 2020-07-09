@@ -11,8 +11,7 @@ tags:
 
 ## Install on linux
 1. `curl https://sh.rustup.rs -sSf | sh`
-1. `source $HOME/.cargo/env`
-1. `rustc --version`
+1. [install step](https://doc.rust-lang.org/book/ch01-01-installation.html)
 
 ## Links
 1. [Officail website](https://www.rust-lang.org/)
