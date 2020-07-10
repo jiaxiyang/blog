@@ -1,5 +1,5 @@
 ---
-title: Rust-start
+title: Rust start
 date: 2020-07-09 08:56:09
 categories:
 - Program
@@ -17,6 +17,8 @@ tags:
 ## Config
 1. [wcy's config](http://wcy123.github.io/2020-04-05-setup-rust-IDE-for-emacs.html)
 
+## Local doc
+1. `rustup doc`
 
 ## Links
 1. [Officail website](https://www.rust-lang.org/)
