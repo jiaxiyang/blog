@@ -14,7 +14,7 @@ tags:
 1. It can easily integrate with other languages.
 
 ### Reliability
-1. It's rich type system and ownership model guarantee **memory-sagety** and **thead-safety**.
+1. It's rich type system and ownership model guarantee <font color=#ff0000>**memory-safety**</font> and **thread-safety**.
 
 ### Productivity
 1. Great documentation
