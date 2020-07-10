@@ -12,7 +12,11 @@ tags:
 
 ## Install on linux
 1. `curl https://sh.rustup.rs -sSf | sh`
-1. [install step](https://doc.rust-lang.org/book/ch01-01-installation.html)
+1. [Install step](https://doc.rust-lang.org/book/ch01-01-installation.html)
+
+## Config
+1. [wcy's config](http://wcy123.github.io/2020-04-05-setup-rust-IDE-for-emacs.html)
+
 
 ## Links
 1. [Officail website](https://www.rust-lang.org/)
