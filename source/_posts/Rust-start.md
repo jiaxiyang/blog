@@ -8,6 +8,7 @@ tags:
 - Rust
 ---
 
+![Ferris](https://www.rust-lang.org/static/images/ferris.gif)
 
 ## Install on linux
 1. `curl https://sh.rustup.rs -sSf | sh`
@@ -15,7 +16,11 @@ tags:
 
 ## Links
 1. [Officail website](https://www.rust-lang.org/)
+1. [Official resource](https://www.rust-lang.org/learn)
+1. [Forum](https://users.rust-lang.org/)
+1. [Packages](https://crates.io/)
 1. [Rust book](https://doc.rust-lang.org/book/)
 1. [Cargo book](https://doc.rust-lang.org/cargo/)
 1. [Rust examples](https://doc.rust-lang.org/stable/rust-by-example/)
 1. [Rust online programming](https://play.rust-lang.org/)
+1. [Ferris pictures](https://rustacean.net/)
