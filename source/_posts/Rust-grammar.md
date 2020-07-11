@@ -21,9 +21,9 @@ tags:
 1. The `fn` syntax declares a new function, the parentheses, `()`, indicate there are no parameters, and the curly bracket, `{`, starts the body of the function.
 1. `let` is used to create a variable. In Rust, variables are immutable by default.
 
-``` rust
-let foo = 5;  // immutable
-let mut bar = 5;  // mutable
-```
+    ``` rust
+    let foo = 5;  // immutable
+    let mut bar = 5;  // mutable
+    ```
 
 1. `String::new()` An associated function is implemented on a type, in this case String, rather than on a particular instance of a String. Some languages call this a static method. This new function creates a new, empty string. You’ll find a new function on many types, because it’s a common name for a function that makes a new value of some kind.
