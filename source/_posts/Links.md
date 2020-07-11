@@ -48,6 +48,6 @@ tags:
 1. C/C++:    [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
 1. Rust:     [rustfmt](https://github.com/rust-lang/rustfmt)
 1. Python:   [black](https://github.com/ambv/black)
-1. Shell:    [shfmt](https://github.com/mvdan/sh)
+1. Shell:    [shfmt](https://github.com/mvdan/sh) (install from github release)
 1. Cmake:    [cmake-format](https://github.com/cheshirekow/cmake_format)
 1. Markdown: [prettier](https://prettier.io/)

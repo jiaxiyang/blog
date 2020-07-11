@@ -18,7 +18,7 @@ tags:
 
 ### Productivity
 1. Great documentation
-1. Friendly compiler
+1. Friendly compiler, find most errors when compiling
 1. An integrated package manager
 
 ## Why Name Rust?
