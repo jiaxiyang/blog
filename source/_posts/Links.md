@@ -15,6 +15,7 @@ tags:
 5. [Tmux](http://comtronic.com.au/blog/wp-content/uploads/comtronic_cheatsheet_tmux_A4.pdf)
 6. [Github Git](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 7. [Matlab](http://sites.nd.edu/gfu/files/2019/07/cheatsheet.pdf)
+8. [Markdown](https://www.markdownguide.org/cheat-sheet/)
 
 ## Emacs
 1. [GNU Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
