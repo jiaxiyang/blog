@@ -42,3 +42,12 @@ tags:
 1. [C++](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/#)
 1. [Python](https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/)
 1. [Shell](https://zh-google-styleguide.readthedocs.io/en/latest/google-shell-styleguide/contents/)
+
+## Code Format
+1. All:      [format-all](https://github.com/lassik/emacs-format-all-the-code)
+1. C/C++:    [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
+1. Rust:     [rustfmt](https://github.com/rust-lang/rustfmt)
+1. Python:   [black](https://github.com/ambv/black)
+1. Shell:    [shfmt](https://github.com/mvdan/sh)
+1. Cmake:    [cmake-format](https://github.com/cheshirekow/cmake_format)
+1. Markdown: [prettier](https://prettier.io/)
