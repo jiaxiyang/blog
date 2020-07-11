@@ -10,11 +10,11 @@ tags:
 
 ## Why Rust?
 ### Performance
-1. It's **fast** and memory efficient: with no runtime or garbage collector.
+1. It's **`fast`** and memory efficient: with no runtime or garbage collector.
 1. It can easily integrate with other languages.
 
 ### Reliability
-1. It's rich type system and ownership model guarantee <font color=#ff0000>**memory-safety**</font> and **thread-safety**.
+1. It's rich type system and ownership model guarantee <font color='red'>**memory-safety**</font> and <font color='red'>**thread-safety**</font>.
 
 ### Productivity
 1. Great documentation
