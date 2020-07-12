@@ -20,6 +20,7 @@ tags:
 1. Great documentation
 1. Friendly compiler, find most errors when compiling
 1. An integrated package manager
+1. Doc system: `cargo doc --open`
 
 ## Why Name Rust?
 1. It's a pun on "chrome". Rust was written by the engineer company Mozilla(firefox). And chrome is a metal.

@@ -27,3 +27,7 @@ tags:
     ```
 
 1. `String::new()` An associated function is implemented on a type, in this case String, rather than on a particular instance of a String. Some languages call this a static method. This new function creates a new, empty string. You’ll find a new function on many types, because it’s a common name for a function that makes a new value of some kind.
+1. `{}` is a place holder when using `println!`
+1.  Crate is a coleection of Rust source code files.
+1. Cargo.toml dependencies rand = "0.5.5";  In this case, we’ll specify the rand crate with the semantic version specifier 0.5.5. Cargo understands Semantic Versioning (sometimes called SemVer), which is a standard for writing version numbers. The number 0.5.5 is actually shorthand for ^0.5.5, which means “any version that has a public API compatible with version 0.5.5.”
+1. `cargo doc --open` It will build documentation provided by all of your dependencies locally and open it in your browser.
