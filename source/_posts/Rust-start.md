@@ -23,6 +23,7 @@ tags:
 ## Links
 1. [Officail website](https://www.rust-lang.org/)
 1. [Official resource](https://www.rust-lang.org/learn)
+1. [Awesome Rust](https://github.com/rust-unofficial/awesome-rust#readme)
 1. [Forum](https://users.rust-lang.org/)
 1. [Packages](https://crates.io/)
 1. [Rust book](https://doc.rust-lang.org/book/)
@@ -31,3 +32,4 @@ tags:
 1. [Rust examples](https://doc.rust-lang.org/stable/rust-by-example/)
 1. [Rust online programming](https://play.rust-lang.org/)
 1. [Ferris pictures](https://rustacean.net/)
+1. [Rust gameboy](https://github.com/mohanson/gameboy)
