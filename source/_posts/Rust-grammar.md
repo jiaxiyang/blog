@@ -31,3 +31,5 @@ tags:
 1.  Crate is a coleection of Rust source code files.
 1. Cargo.toml dependencies rand = "0.5.5";  In this case, we’ll specify the rand crate with the semantic version specifier 0.5.5. Cargo understands Semantic Versioning (sometimes called SemVer), which is a standard for writing version numbers. The number 0.5.5 is actually shorthand for ^0.5.5, which means “any version that has a public API compatible with version 0.5.5.”
 1. `cargo doc --open` It will build documentation provided by all of your dependencies locally and open it in your browser.
+1. `match` is like `switch` in C++
+1. shallow copy, deep copy(clone), move(let s2 = s1; // s1 is invailid)

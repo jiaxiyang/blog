@@ -24,6 +24,7 @@ tags:
 1. [Officail website](https://www.rust-lang.org/)
 1. [Official resource](https://www.rust-lang.org/learn)
 1. [Awesome Rust](https://github.com/rust-unofficial/awesome-rust#readme)
+1. [Rust learning](https://github.com/ctjhoa/rust-learning)
 1. [Forum](https://users.rust-lang.org/)
 1. [Packages](https://crates.io/)
 1. [Rust book](https://doc.rust-lang.org/book/)
