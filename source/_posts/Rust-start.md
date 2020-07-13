@@ -34,3 +34,5 @@ tags:
 1. [Rust online programming](https://play.rust-lang.org/)
 1. [Ferris pictures](https://rustacean.net/)
 1. [Rust gameboy](https://github.com/mohanson/gameboy)
+1. [Rust zhihu](https://www.zhihu.com/topic/19674381/intro)
+1. [Rust 张汉东](https://www.infoq.cn/article/Uugi_eIJusEka1aSPmQM)

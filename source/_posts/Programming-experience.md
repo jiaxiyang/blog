@@ -26,7 +26,8 @@ tags:
 1. 程序包含功能和性能，注重分析程序的性能，比如帧率，时间
 1. 流程: 开发(开发新库），测试(jenkins)，发布(上github)，运营(gihub issues)
 1. 重设计，轻实现
-1. 按部就班，不能急于求成。
+1. 按部就班，不能急于求成
+1. 知乎话题：rust, emacs
 
 ## Productivity
 1. 用好tmux, fd, rg, zh, fzf
