@@ -30,6 +30,10 @@ tags:
 1. [Melpa](http://melpa.org/)
 1. [Org Mode](https://orgmode.org/)
 
+## Emacs + Rust
+1. [Remacs](https://github.com/remacs/remacs)
+1. [Rust to expand Emacs](https://emacs-china.org/t/rust-emacs/12551)
+
 ## Git
 1. [Git Book](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
 2. [Git Internals: the most important concept](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)

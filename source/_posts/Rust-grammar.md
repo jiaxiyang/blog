@@ -33,3 +33,8 @@ tags:
 1. `cargo doc --open` It will build documentation provided by all of your dependencies locally and open it in your browser.
 1. `match` is like `switch` in C++
 1. shallow copy, deep copy(clone), move(let s2 = s1; // s1 is invailid)
+1. Differences Between Immutable Variables and Constants:
+   - You declare constants using the const keyword instead of the let keyword, and the type of the value must be annotated.
+   - Constants can be declared in any scope, including the global scope
+   - Constants may be set only to a constant expression, not the result of a function call or any other value that could only be computed at runtime.
+1.
