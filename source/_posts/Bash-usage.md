@@ -18,6 +18,7 @@ tags:
 1. [rg](https://github.com/BurntSushi/ripgrep)
 1. [fd](https://github.com/sharkdp/fd)
 1. [shfmt](https://github.com/mvdan/sh)
+1. [zsh](https://github.com/ohmyzsh)
 
 ## Shortcuts
 
