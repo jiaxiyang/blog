@@ -17,25 +17,32 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ## autosuggestions
 
  ``` shell
- http://www.cnblogs.com/weixuqin/p/7029177.html
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-.zshrc:   plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 vi ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 文件，修改 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
-terminator配色  build in schemes(solarized dark) -> custom ->  text color to bright
  ```
 
 ## zsh-syntax-highlighting
 
 ``` shell
 git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+```
 
-plugins=(zsh-syntax-highlighting)
+## .zshrc config
+
+``` shell
+export PROMPT="%n@%m:%1~%# "
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+```
+
+## Othe config
+
+``` shell
+git config oh-my-zsh.hide-status 1 --global #close git status
 ```
 
 ## Powlevel9k theme
 
 ```
-https://www.colabug.com/128524.html
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 .zshrc：
 export TERM="xterm-256color"
@@ -56,10 +63,9 @@ cp config/10-symbols.conf ~/.config/fontconfig/conf.d
 source ~/.fonts/*.sh
 ```
 
-## atujump
+## autojump
 
  ``` shell
- https://www.linuxidc.com/Linux/2015-08/121421.htm
 git clone git://github.com/joelthelion/autojump.git
 cd autojump
 ./install.py
@@ -73,13 +79,6 @@ git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
 ```
-
-## .zshrc config
-
-``` shell
-export PROMPT="%n@%m:%1~%# "
-```
-
 
 ## Links
 install oh my zsh :         sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
