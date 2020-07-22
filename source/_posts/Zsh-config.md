@@ -75,7 +75,10 @@ cd fonts
 ```
 
 ## .zshrc config
-1. export PROMPT="%n@%m:%1~%# "
+
+ ``` shell
+ export PROMPT="%n@%m:%1~%# "
+ ```
 
 
 ## Links
