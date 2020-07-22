@@ -14,6 +14,24 @@ tags:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+## autosuggestions
+
+ ``` shell
+ http://www.cnblogs.com/weixuqin/p/7029177.html
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+.zshrc:   plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+vi ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 文件，修改 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
+terminator配色  build in schemes(solarized dark) -> custom ->  text color to bright
+ ```
+
+## zsh-syntax-highlighting
+
+``` shell
+git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+plugins=(zsh-syntax-highlighting)
+```
+
 ## Powlevel9k theme
 
 ```
@@ -38,24 +56,6 @@ cp config/10-symbols.conf ~/.config/fontconfig/conf.d
 source ~/.fonts/*.sh
 ```
 
-## autosuggestions
-
- ``` shell
- http://www.cnblogs.com/weixuqin/p/7029177.html
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-.zshrc:   plugins=(zsh-autosuggestions git zsh-syntax-highlighting)
-vi ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 文件，修改 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
-terminator配色  build in schemes(solarized dark) -> custom ->  text color to bright
- ```
-
-## zsh-syntax-highlighting
-
-``` shell
-git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-
-plugins=(zsh-syntax-highlighting)
-```
-
 ## atujump
 
  ``` shell
@@ -73,6 +73,9 @@ git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
 ```
+
+## .zshrc config
+1. export PROMPT="%n@%m:%1~%# "
 
 
 ## Links
