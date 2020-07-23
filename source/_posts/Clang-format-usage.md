@@ -13,6 +13,7 @@ tags:
 ## Install clang
 1. [Build clang from source](http://clang.llvm.org/get_started.html)
 1. [Clang format doc](http://clang.llvm.org/docs/ClangFormat.html)
+1. [Clang format style](http://clang.llvm.org/docs/ClangFormatStyleOptions.html)
 
 ## Bash Command
 1. Format one cpp file:
@@ -54,4 +55,15 @@ autocmd BufWritePre *.h,*.hpp,*.cc,*.cpp call Formatonsave()
   (add-hook 'c-mode-common-hook #'(lambda()
                                     (add-hook 'before-save-hook
                                               'clang-format-buffer t t))))
+```
+
+## Config
+Clang-format understands also special comments that switch formatting in a delimited range. The code between a comment `// clang-format off or /* clang-format off */ `up to a comment `// clang-format on or /* clang-format on */ `will not be formatted. The comments themselves will be formatted (aligned) normally.
+
+``` c++
+int formatted_code;
+// clang-format off
+    void    unformatted_code  ;
+// clang-format on
+void formatted_code_again;
 ```
