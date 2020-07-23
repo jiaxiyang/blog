@@ -32,7 +32,7 @@ git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/p
 
 ``` shell
 export PROMPT="%n@%m:%1~%# "
-plugins=(rust rustup cargo zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(rust rustup cargo zsh-autosuggestions zsh-syntax-highlighting colored-man-pages tmux fd)
 ```
 
 ## Othe config
