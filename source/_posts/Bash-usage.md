@@ -19,6 +19,8 @@ tags:
 1. [fd](https://github.com/sharkdp/fd)
 1. [shfmt](https://github.com/mvdan/sh)
 1. [zsh](https://github.com/ohmyzsh)
+1. [exa](https://github.com/ogham/exa)
+1. [hexyl](https://github.com/sharkdp/hexyl)
 
 ## Shortcuts
 
