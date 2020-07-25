@@ -25,6 +25,10 @@ tags:
 1. [Rust gameboy](https://github.com/mohanson/gameboy)
 1. [Rust zhihu](https://www.zhihu.com/topic/19674381/intro)
 1. [Rust 张汉东](https://www.infoq.cn/article/Uugi_eIJusEka1aSPmQM)
+1. [Concept video](https://www.youtube.com/watch?v=SZvs15hC81U)
+1. [Youtube Rust channel](https://www.youtube.com/channel/UCaYhcUwRBNscFNUKTjgPFiA)
+
+
 
 ## Cheatsheet
 1. [Gdb](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)

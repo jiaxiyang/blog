@@ -10,7 +10,10 @@ tags:
 ## Programming experience
 1. 最重要的是官方资源，看英文原文
 1. 文档越详细越好，肯定会忘
+1. github排名，github trending
 1. 查看开发者的github找资料
+1. github开源代码。youtube视频教程。
+1. 找最专业的，从原理上学习。如rust设计者讲rust，git原理。
 1. Github awesome系列，awesome emacs, shell，rust
 1. emacs org管理项目，todo，日志
 1. 遇见问题记得看github issues
@@ -39,6 +42,9 @@ tags:
 1. 留意FAQ
 1. 函数(一层抽象)，类，泛型都是为了重复代码。
 1. 写代码时明确（输入，输出，算法）（开，关，做）（构造，析构，虚函数)
+1. 先见识，后摸索。学习新语言，可以先看看视频教程，再自己摸索。
+1. RFC流程。
+
 
 ## Productivity
 1. 用好tmux, fd, rg, zh, fzf
@@ -60,3 +66,6 @@ tags:
     - 快捷键有意义
     - 尽量简单简洁
     - 尽量少用左手小拇指，多用命令
+
+## Links
+1. [Hacker laws](https://github.com/dwmkerr/hacker-laws)

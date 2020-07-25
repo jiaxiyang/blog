@@ -21,6 +21,7 @@ tags:
 1. [zsh](https://github.com/ohmyzsh)
 1. [exa](https://github.com/ogham/exa)
 1. [hexyl](https://github.com/sharkdp/hexyl)
+1. [tldr](https://github.com/tldr-pages/tldr)
 
 ## Shortcuts
 
