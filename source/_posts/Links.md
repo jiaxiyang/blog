@@ -28,7 +28,11 @@ tags:
 1. [Concept video](https://www.youtube.com/watch?v=SZvs15hC81U)
 1. [Youtube Rust channel](https://www.youtube.com/channel/UCaYhcUwRBNscFNUKTjgPFiA)
 
-
+## C++
+1. [Cppreference](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
+1. [CppCon](https://cppcon.org/)
+1. [CppCon resources](https://github.com/CppCon)
+1. [Lifetime analysis for everyone](https://github.com/CppCon/CppCon2019/blob/master/Presentations/lifetime_analysis_for_everyone/lifetime_analysis_for_everyone__matthias_gehre_gabor_horvath__cppcon_2019.pptx)
 
 ## Cheatsheet
 1. [Gdb](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)

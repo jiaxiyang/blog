@@ -8,7 +8,7 @@ tags:
 ---
 
 ## Programming experience
-1. 最重要的是官方资源，看英文原文
+1. 最重要的是官方资源，看英文原文，如rust官网教程，c++ cppcon会议。
 1. 文档越详细越好，肯定会忘
 1. github排名，github trending
 1. 查看开发者的github找资料
