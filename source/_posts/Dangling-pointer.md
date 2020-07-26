@@ -3,9 +3,9 @@ title: Dangling pointer
 date: 2020-07-26 09:18:37
 categories:
 - Program
-- C++
+- Cpp
 tags:
-- C++
+- Cpp
 ---
 
 ## Sample1
