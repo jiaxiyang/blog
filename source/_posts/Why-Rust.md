@@ -22,6 +22,12 @@ tags:
 1. An integrated package manager
 1. Doc system: `cargo doc --open`
 
+## Rust features
+1. Zero-cost abstractions
+1. Modern conveniences
+1. Type system: Ownership and Borrowing
+1. Sense of craftsmanship
+
 ## Why Name Rust?
 1. It's a pun on "chrome". Rust was written by the engineer company Mozilla(firefox). And chrome is a metal.
 
