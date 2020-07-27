@@ -37,4 +37,4 @@ tags:
    - You declare constants using the const keyword instead of the let keyword, and the type of the value must be annotated.
    - Constants can be declared in any scope, including the global scope
    - Constants may be set only to a constant expression, not the result of a function call or any other value that could only be computed at runtime.
-1.
+1. trait can add some useful functions for user's own struct.
