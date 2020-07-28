@@ -38,3 +38,8 @@ tags:
    - Constants can be declared in any scope, including the global scope
    - Constants may be set only to a constant expression, not the result of a function call or any other value that could only be computed at runtime.
 1. trait can add some useful functions for user's own struct.
+1. trait 可以与泛型结合来将泛型限制为拥有特定行为的类型，而不是任意类型。
+1. Rust编译时会将泛型代码单态化(monomorphization)来保证效率，单态化是指编译时用具体类型来填充泛型。
+1. 用户会将重复代码泛化（抽象），编译器会将泛化代码具体化。
+1. trait类似其他语言中接口(interfaces)功能，虽然有些不同。
+1. 只有当trait或者要实现trait的类型位于crate的本地作用域时，才能为该类型实现trait。

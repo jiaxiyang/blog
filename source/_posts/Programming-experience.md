@@ -13,6 +13,7 @@ tags:
 1. github排名，github trending
 1. 查看开发者的github找资料
 1. github开源代码。youtube视频教程。
+1. 随时写一些简单的例子验证想法。
 1. 找最专业的，从原理上学习。如rust设计者讲rust，git原理。
 1. Github awesome系列，awesome emacs, shell，rust
 1. emacs org管理项目，todo，日志
@@ -44,6 +45,7 @@ tags:
 1. 写代码时明确（输入，输出，算法）（开，关，做）（构造，析构，虚函数)
 1. 先见识，后摸索。学习新语言，可以先看看视频教程，再自己摸索。
 1. RFC流程。
+1. C++ API -> C API 可能拆分， C API -> Rust API 可能合并
 
 
 ## Productivity
