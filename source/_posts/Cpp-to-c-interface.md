@@ -38,7 +38,7 @@ Class MethodImp : public Method {
  private:
     int name_;
     int value_;
-    friend class c_api;
+    friend class c_api;  // the purpose is to get the private member which can not get from the public interface
 }
 }
 
