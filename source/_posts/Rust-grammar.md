@@ -44,7 +44,14 @@ tags:
 1. trait类似其他语言中接口(interfaces)功能，虽然有些不同。
 1. 只有当trait或者要实现trait的类型位于crate的本地作用域时，才能为该类型实现trait。
 
-## 生命周期
+
+## Ownership 所有权
+
+## Error Handling 错误处理
+
+## Traits
+
+## Lifetimes 生命周期
 1. 生命周期的目的是**避免悬垂指针**
 1. `longest<'a>(x: &'a str, y: &'a str) ->&'a str` 它的实际含义是longest函数保证返回的引用的生命周期与传入该函数的引用的生命周期的较小者一致（x作用域和y作用域重叠的那一部分）。并没有改变传入值或返回值的生命周期，而是指出任何不满足这个约束条件的值都将被借用检查器拒绝。
 1. `struct Test<'a> { part: &'a str, }` Test的实例不能比part字段中的引用存在的更久，Test实例应先离开作用域。（后定义的存在的应更短）
@@ -65,3 +72,15 @@ tags:
 1. 方法定义中的生命周期注解应用于关联函数，方法（含有`&self`)可省略。
 1. 静态生命周期： `'static`，其生命周期能够存活于整个程序期间。所有的字符串字面值都拥有`'static`生命周期。
 1. 生命周期也是泛型`test<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str where T: Display` 因为生命周期也是泛型，所以`'a`和泛型参数`T`都位于函数名后的同一尖括号列表中。
+
+## Generic Types 泛型
+
+## Iterators and Closures 迭代器与闭包
+
+## Smart Pointers 智能指针
+
+## Concurrency 并发
+
+## Object Oriented 面向对象
+
+## Macros 宏

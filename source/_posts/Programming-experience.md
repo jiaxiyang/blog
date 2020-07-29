@@ -10,11 +10,12 @@ tags:
 ## Programming experience
 1. 最重要的是官方资源，看英文原文，如rust官网教程，c++ cppcon会议。
 1. 看文档的时候抓关键点记笔记，有利于专注，也可防止遗忘。
+1. 分主题模块学习语言，分拆效率高，更容易focus，不能一股脑的啥都往脑子里塞。
 1. 文档越详细越好，肯定会忘
 1. github排名，github trending
 1. 查看开发者的github找资料
 1. github开源代码。youtube视频教程。
-1. 随时写一些简单的例子验证想法。
+1. 随时写一些简单的例子验证想法。很重要。
 1. 找最专业的，从原理上学习。如rust设计者讲rust，git原理。
 1. Github awesome系列，awesome emacs, shell，rust
 1. emacs org管理项目，todo，日志
