@@ -24,8 +24,16 @@ tags:
 1. [tldr](https://github.com/tldr-pages/tldr)
 1. [vimium](https://github.com/philc/vimium)
 
-## Shortcuts
-
+## Object Tools
+1. `ar` : 创建静态库，插入删除，列出和提取成员。
+1. `strings` : 列出一个目标文件中所有可打印的字符串。
+1. `strip` : 从目标文件中删除符号表信息。
+1. `nm` : 列出一个目标文件的符号表中定义的符号。
+1. `size` : 列出目标文件中的节的名字和大小。
+1. `readelf` : 显示一个目标文件的完整结构，包含size和nm的功能。
+1. `objdump` : 所有二进制文件之母。能够显示一个目标文件中所有的信息。它最大作用是反汇编.text节中的二进制指令。
+1. `ldd` : 列出一个可执行文件在运行时所需要的共享库。
+1. !notice : use tldr to show the basic usage.
 
 ## Miscellaneous
 1. `cat url-list.txt | xargs wget -c`xargs将参数列表转换成小块分段传递给其他命令
