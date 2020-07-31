@@ -13,7 +13,7 @@ tags:
 1. [Awesome Rust](https://github.com/rust-unofficial/awesome-rust#readme)
 1. [Rust learning](https://github.com/ctjhoa/rust-learning)
 1. [Forum](https://users.rust-lang.org/)
-1. [Packages](https://crates.io/)
+1. [crates.io](https://crates.io/)
 1. [Rust book](https://doc.rust-lang.org/book/)
 1. [Rust book Chinese](http://120.78.128.153/rustbook/)
 1. [Cargo book](https://doc.rust-lang.org/cargo/)

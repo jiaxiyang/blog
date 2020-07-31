@@ -11,9 +11,6 @@ tags:
 ## Useful Tools (can install from github release)
 1. [tmux](https://github.com/tmux/tmux/wiki)
 1. [z.lua(zh)](https://github.com/skywind3000/z.lua)
-   - zh: grep directory
-   - zh foo: auto jump to foo directory
-   - C-r: grep history
 1. [fzf](https://github.com/junegunn/fzf)
 1. [rg](https://github.com/BurntSushi/ripgrep)
 1. [fd](https://github.com/sharkdp/fd)

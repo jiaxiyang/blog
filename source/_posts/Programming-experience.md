@@ -11,6 +11,7 @@ tags:
 1. 最重要的是官方资源，看英文原文，如rust官网教程，c++ cppcon会议。
 1. 看文档的时候抓关键点记笔记，有利于专注，记录的时候会强化，加深理解。
 1. 分主题模块学习语言，分拆效率高，更容易focus，不能一股脑的啥都往脑子里塞。
+1. 学习新知识时先明确概念，如cy学习git，明确git的原理，四个object；学习cmake时明确component和target；学习gstreamer明确component,pad等，给别人讲解是也是从基本概念、基本组成讲起。
 1. 文档越详细越好，肯定会忘
 1. github排名，github trending
 1. 查看开发者的github找资料

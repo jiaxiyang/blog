@@ -45,6 +45,24 @@ tags:
 1. 只有当trait或者要实现trait的类型位于crate的本地作用域时，才能为该类型实现trait。
 
 
+
+## Project Manage
+1. 包`packages`: Cargo的一个功能，允许你构建、测试和分享crate
+1. `crates`: 一个模块的`树形`结构，它形成了库或二进制项目。
+1. 模块`modeules and use`: 允许你控制作用域和路径的私有性。
+1. 路径`path`: 一个命名机结构体、函数或模块等项的方式。
+1. 一个包中可以包含多个二进制crate和一个可选的crate库。
+1. 包中至少包含一个crate，无论是库还是二进制，至多包含一个库crate
+1. `cargo new`会创建一个包。
+1. Cargo准守一个约定： `src/main.rs`就是一个与包同名的二进制crate的crate根。同理，`src/lib.rs`是库crate的crate根。如果同时包含，则它有两个crate。
+1. 通过将文件放在`src/bin`目录下，一个包可以拥有多个二进制crate：每个`src/bin`下的文件都会被编译成一个独立的二进制crate。
+1. 模块让我们可以将一个crate中的代码进行分组，以提高重用性。
+1. 模块一般是在上一级文件中定义，不是在本文件中定义，如可以在lib.rs中定义模块，然后在相应.rs文件中实现该模块。
+1. crate的组织结构类似于文件系统的目录，被称为模块树(module tree)。
+1. Rust通过路径来查找一个项的位置。
+1. `绝对路径(absolute path)` 从crate根开始，以crate名或者字面值`crate`开头。
+1. `相对路径(relative path)` 从当前模块开始，以`self`、`super`或当前模块的表示符开头。
+
 ## Ownership 所有权
 
 ## Error Handling 错误处理
