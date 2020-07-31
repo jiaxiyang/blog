@@ -72,6 +72,12 @@ tags:
 1. `use std::{cmp::Ordering, io};`使用嵌套路径减少use的使用。
 1. `use std::io:*` 将`std::io`中定义的所有公有项引入当前作用域。使用时要多加小心，常用于测试模块`tests`中。
 1. Rust将package分成多个crate，将crate分成模块，通过绝对或相对路径从一个模块引用另一个模块。
+1. Cargo提供了叫工作空间`workspaces`的功能，它可以帮助我们管理多个相关的协同开发的包。
+1. 工作空间是一系列共享同样的cargo.lock和输出目录的包。
+1. 工作空间顶级目录中的Cargo.toml中不包含`[package]`等信息，相反，它以`[workspace]`部分作为开始。
+1. 工作空间在顶级目录有一个`target`目录，`member`并没有自己的target目录。通过共享的target目录，工作空间可以避免其他crate多余的重复构建。
+1. cargo不假定工作空间中的crates包会相互依赖，所以需要明确表明工作空间中crate包的依赖关系。一个包用到了其他包，需要在该包的Cargo.toml文件`[dependencies]`域中加入依赖
+1. 工作空间只在根目录有一个Cargo.lock，而不是在每一个crate（就当是packge)目录都有Cargo.lock。这确保了所有的crate都使用完全相同版本的依赖。也节省了空间，避免多个拷贝。
 
 ## Ownership 所有权
 
