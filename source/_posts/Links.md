@@ -35,6 +35,9 @@ tags:
 1. [Youtube CppCon video](https://www.youtube.com/user/CppCon/)
 1. [CppCon resources](https://github.com/CppCon)
 1. [Lifetime analysis for everyone](https://github.com/CppCon/CppCon2019/blob/master/Presentations/lifetime_analysis_for_everyone/lifetime_analysis_for_everyone__matthias_gehre_gabor_horvath__cppcon_2019.pptx)
+1. [Interview](https://github.com/huihut/interview)
+1. [CS-Notes](https://github.com/CyC2018/CS-Notes)
+1. [Factory pattern](https://blog.csdn.net/qq_38238296/article/details/79841395?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param)
 
 ## Cheatsheet
 1. [Gdb](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)

@@ -45,6 +45,7 @@ tags:
 1. `crates`: 一个模块的`树形`结构，它形成了库或二进制项目。
 1. 模块`modules and use`: 允许你控制作用域和路径的私有性。
 1. 路径`path`: 一个命名机结构体、函数或模块等项的方式。
+1. 在Rust中，代码包也被称为crates
 1. 一个包中可以包含多个二进制crate和一个可选的crate库。
 1. 包中至少包含一个crate，无论是库还是二进制，至多包含一个库crate
 1. `cargo new`会创建一个包。
@@ -82,6 +83,37 @@ tags:
 ## Ownership 所有权
 
 ## Error Handling 错误处理
+1. Rust将错误组合成两个主要类别，可恢复错误和不可恢复错误。
+1. 可恢复错误通常代表向用户报告错误和重试操作是合理的情况，比如未找到文件。
+1. 不可恢复错误通常是Bug的同义词，比如访问超过数组结尾的位置。
+1. 大部分语言并不区分这两类错误，并采用类似异常这样方式统一处理他们。
+1. Rust没有异常，但是有可恢复错误`Result<T, E>`和不可恢复错误`panic!`
+1. 执行Rust的`panic!`宏时，程序会打印出一个错误信息，展开并清理栈数据，然后接着退出。
+1. 出现panic时，程序默认是`展开(unwinding)`，这意味着Rust会回溯栈并清理它遇到的每一个函数的数据。另一种选择是`终止(abort)`，这回不清理数据就退出程序。可以在Cargo.toml的[profile]部分增加`panic = 'abort'`，可以由展开切换为终止。
+1. 使用`RUST_BACKTRACE`环境变量运行程序会得到一个backtrace，backtrace是一个执行到目前位置所有被调用的函数的列表。
+1. Rust的backtrace跟其他语言一样：阅读backtrace的`关键`是`从头开始读直到发现你自己编写的代码`，这就是问题的根源。`这一行往上是你的代码所调用的代码，往下则是调用你的代码的代码(栈)`
+1. 为了获取带有详细信息的backtrace，`必须是debug模式`
+1. Result枚举的定义。`enum Result<T, E> { Ok(T), Err(E), }`，其中`T`代表返回的`Ok`成员中的`数据类型`，而`E`代表失败是返回`Err`成员中的错误的类型。
+1. Result常与match进行联合使用
+
+``` rust
+use std::fs::File;
+
+fn main() {
+    let f = File::open("hello.txt"); // f值是Ok(file)或者是Err(error)
+
+    let f = match f {
+        Ok(file) => file,
+        Err(error) => {
+            panic!("Problem opening the file: {:?}", error)
+        },
+    };
+}
+```
+1. `unwrap`函数作用于Result，如果Result的值是成员OK，unwrap会返回Ok中的值，如果是成员Err，unwrap会为我们调用`panic!`
+1. `expect`与`unwrap`使用方式一样，`expect`用来调用`panic!`的错误信息将会作为参数传递给`expect`，而不像`unwrap`那样使用默认的`panic!`信息。`expect`更容易查找错误信息位置。
+1. `?`运算符放在Result之后的含义：如果Result的值是Ok，这个表达式将会返回Ok中的值而程序继续执行，如果是Err，Err中的值将作为整个函数的返回值，就好像使用了return关键字一样，这样错误值就被传递给调用者。
+
 
 ## Traits
 
