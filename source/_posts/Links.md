@@ -18,6 +18,7 @@ tags:
 1. [Rust book Chinese](http://120.78.128.153/rustbook/)
 1. [Cargo book](https://doc.rust-lang.org/cargo/)
 1. [Rust examples](https://doc.rust-lang.org/stable/rust-by-example/)
+1. [Rust examples Chinese](https://rust-by-example.budshome.com/index.html)
 1. [STD library](https://doc.rust-lang.org/std/index.html)
 1. [Rust with C](https://doc.rust-lang.org/stable/embedded-book/interoperability/index.html)
 1. [Rust online programming](https://play.rust-lang.org/)
