@@ -14,6 +14,7 @@ tags:
 1. [fzf](https://github.com/junegunn/fzf)
 1. [rg](https://github.com/BurntSushi/ripgrep)
 1. [fd](https://github.com/sharkdp/fd)
+1. [bat](https://github.com/sharkdp/bat)
 1. [shfmt](https://github.com/mvdan/sh)
 1. [zsh](https://github.com/ohmyzsh)
 1. [exa](https://github.com/ogham/exa)
