@@ -9,6 +9,7 @@ tags:
 
 ## Programming experience
 1. 最重要的是官方资源，看英文原文，如rust官网教程，c++ cppcon会议。
+1. 先学习基本概念, 然后学习框架, 设计模式，最后再学习具体代码。
 1. 读代码时要先理解总体设计架构，设计思路，再具体到细节，架构理解了代码就不是问题。
 1. 多学点架构，设计方法，少学点语法。
 1. 架构是撑起项目的基础，理解架构了就能看清楚系统轮廓。架构就相当于系统的草图，有了草图才能起高楼。
@@ -20,7 +21,7 @@ tags:
 1. 文档越详细越好，肯定会忘
 1. github排名，github trending
 1. 查看开发者的github找资料
-1. github开源代码。youtube视频教程。
+1. 先模仿github开源代码。youtube视频教程。
 1. 随时写一些简单的例子验证想法。很重要。
 1. 找最专业的，从原理上学习。如rust设计者讲rust，git原理。
 1. Github awesome系列，awesome emacs, shell，rust
@@ -55,6 +56,7 @@ tags:
 1. RFC流程。
 1. C++ API -> C API 可能拆分， C API -> Rust API 可能合并
 1. 区分公开与非公开部分。
+1.
 
 
 ## Productivity

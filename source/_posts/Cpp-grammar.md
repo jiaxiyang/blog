@@ -8,7 +8,30 @@ tags:
 - Cpp
 ---
 
-## Concept
+## C++ language features
+
+## Lifetime
+
+## Smart Pointers
+
+## RALL
+
+## Zero Cost Abstract
+
+## Lambdas
+
+## Move Semantics
+
+## Template
+
+## OOP
+
+## Memory
+
+## Multi Thread
+
+
+## Small Module
 ### 值语义与引用语义
 1. 值语义(value sematics)指的是对象的拷贝与原对象无关，就像拷贝int一样，拷贝之后与原对象脱离关系。
 1. 引用语义(reference sematics)或者对象语义(object sematics)是指面向对象意义下的对象，对象是禁止拷贝的。因为拷贝对象是无意义的，如拷贝一个雇员不会变成两个雇员。
@@ -22,3 +45,6 @@ tags:
 1. 默认拷贝构造函数是最简单的浅拷贝。
 1. 智能指针实际上是将对象语义转化为值语义。
 1.
+
+
+## basic
