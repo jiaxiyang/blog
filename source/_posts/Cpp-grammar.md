@@ -23,10 +23,18 @@ tags:
 ## Move Semantics
 
 ## Template
+1. typename关键字用于引入一个模板参数
+1. 使用typename标识嵌套类型名称。
+1. 使用从属类型时要加typename。比如：`typename T::const_iterator iter()`不加typename会报错，因为编译器并不知道T::const_iterator是一个类型的名字还是摸个变量的名字。
+1. 可变参数模板(c++11之前参数个数固定不可变)：`template<typename... Args> class test`表示Args个数不固定，使用时`void f(Args... args)`
+
+## Macros
+
 
 ## OOP
 
 ## Memory
+### 内存分为host内存和device内存。需要管理device上需要大空间的对象，比如tensor，还需要在host和device内存中传输数据。输入的数据在host端处理后需要发送到device上使用，device上输出结果或dump的数据需要在host端显示或者保存。不同的设备管理方式不同，当设备段是直接通过物理地址管理内存的，可以在host端创建一个对象来管理设备端的内存。
 
 ## Multi Thread
 
@@ -45,6 +53,14 @@ tags:
 1. 默认拷贝构造函数是最简单的浅拷贝。
 1. 智能指针实际上是将对象语义转化为值语义。
 1.
+
+### class和struct区别
+1. C++中的struct对C中的struct进行了扩充，可以有成员函数，可以被京城，可以有多台。
+1. struct和class最大的区别是访问权限，struct成员默认是public的，class默认是private，struct继承默认是public，class默认是private。
+1. class可以定义模板参数，就像typename，而struct不行。
+
+### template定义时的typename和class区别
+1. 最早使用的class可能会造成概念上的混淆，后面加上了typename替代class。
 
 
 ## basic
