@@ -14,6 +14,8 @@ tags:
 
 ## Smart Pointers
 
+## Cast
+
 ## RALL
 
 ## Zero Cost Abstract
@@ -30,11 +32,28 @@ tags:
 
 ## Macros
 
+## Reflection
 
 ## OOP
 
 ## Memory
-### 内存分为host内存和device内存。需要管理device上需要大空间的对象，比如tensor，还需要在host和device内存中传输数据。输入的数据在host端处理后需要发送到device上使用，device上输出结果或dump的数据需要在host端显示或者保存。不同的设备管理方式不同，当设备段是直接通过物理地址管理内存的，可以在host端创建一个对象来管理设备端的内存。
+1. 内存分为host内存和device内存。需要管理device上需要大空间的对象，比如tensor，还需要在host和device内存中传输数据。输入的数据在host端处理后需要发送到device上使用，device上输出结果或dump的数据需要在host端显示或者保存。不同的设备管理方式不同，当设备段是直接通过物理地址管理内存的，可以在host端创建一个对象来管理设备端的内存。
+
+### 内存分配方式
+1. `栈` 函数参数，局部变量
+1. `堆` malloc和free。堆上操作系统维护的一块内存
+1. `自由存储区` new和delete。自由存储区是C++中通过new和delete动态分配和释放对象的抽象概念。有些编译器使用malloc和free实现new和delete。
+1. `全局/静态存储区` 全局变量和static变量。
+1. `常量存储区` 存放的是常量，不允许修改。
+
+### 内存管理方式
+1. `自动存储`
+1. `静态存储`
+1. `动态存储`
+1. `线程存储`
+
+
+
 
 ## Multi Thread
 
@@ -61,6 +80,33 @@ tags:
 
 ### template定义时的typename和class区别
 1. 最早使用的class可能会造成概念上的混淆，后面加上了typename替代class。
+
+### new/delete和malloc/free区别
+1. malloc/free是c++/c标准库函数，new/delete是C++运算符，都可以用于动态内存申请和内存释放。
+1. new一个对象时会调用构造函数，delete一个对象时会调用析构函数。
+1. 对于非内部累来说，malloc/free无法满足在对象创建时执行构造函数，在对象销毁时调用析构函数。
+1. 由于内部数据类型的对象没有构造和析构的过程，对他们而言malloc/free和new/delete是等价的。
+1. 为什么需要malloc和free，因为C++中经常调用c函数，而c只能用malloc和free管理动态内存（堆上）。
+
+### 函数调用的过程
+
+### 左值和右值
+
+### c中的const和c++中的const区别
+1. c语言中只有enum能实现真正的常量
+
+### macro和inline
+
+### const关键字作用
+
+### 虚函数中的delete，new，final
+
+### 友元
+1. 友元函数
+2. 友元类
+3. 友元成员函数
+
+###
 
 
 ## basic
