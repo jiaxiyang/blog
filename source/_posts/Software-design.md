@@ -12,6 +12,9 @@ tags:
 
 
 ## Design Patterns
+### 工厂模式
+### 单例模式
+
 
 ## Software Design
 

@@ -31,8 +31,19 @@ tags:
 1. 可变参数模板(c++11之前参数个数固定不可变)：`template<typename... Args> class test`表示Args个数不固定，使用时`void f(Args... args)`
 
 ## Macros
+### #define
+### typedefine
 
 ## Reflection
+1. 由于c++中的类结构可读性差，难以调试，协议升级困难等缺点，导致xml与json等自注释文本协议普及。但`文本协议`（文件里方便阅读理解）与`内存模型`（内存上）存在差异，需要有序列化与反序列化对象的操作。序列化：将文本转化为类对象，反序列化：将类对象转化为文本。开发者需要写大量重复代码去进行序列化与反序列化操作。Java为解决这个问题添加了反射机制:将类型信息编译到class文件中，并利用这些信息提供统一的序列化与反序列化功能。
+1. 如何通过类的名称来生成新的对象？例：`ClassXX object = new "ClassXX"`, C++使用：`ClassXX object = new ClassXX(x)` 工厂函数是通过在工厂函数里指定tpye来生成，不是通过类名。`ClassXX object = ClassXX::create(x)`
+1. 实现方法：
+   - 每一个类都创建一个产生对象的函数
+   - 设计一个总的工厂类，类中使用map保存(类名，函数)。通过共产类创建对象。因为全局只需要一个工厂类的对象，因此使用单例模式设计工厂类。
+### Reference
+1. [concept](https://zhuanlan.zhihu.com/p/70044481)
+1. [sample](https://blog.csdn.net/K346K346/article/details/51698184)
+
 
 ## OOP
 
@@ -53,8 +64,6 @@ tags:
 1. `线程存储`
 
 
-
-
 ## Multi Thread
 
 
@@ -71,7 +80,21 @@ tags:
 1. (zero abstract cost) C++的class的layout与C struct一样，没有额外开销。定义一个只包含一个int的class的对象和定义一个int一样。
 1. 默认拷贝构造函数是最简单的浅拷贝。
 1. 智能指针实际上是将对象语义转化为值语义。
-1.
+
+### static
+1. 局部static变量只被初始化一次，生命周期是从创建到程序结束。相比全局static变量只是作用域不是全局。
+1. 如果全局变量仅在单个函数中使用，则可以将这个变量改为该函数的静态局部变量。
+1. 全局变量，静态局部变量，静态全局变量都存在静态存储区。
+1. 函数中必须要使用statci变量的情况：当某个函数返回值为指针类型时，则必须是static的局部变量的地址作为返回值，因为他的生命周期是整个程序运行期间。
+1. static全局变量限定作用范围为定义该变量的文件。
+
+### 作用域
+1. `全局作用域`
+1. `局部作用域`
+1. `语句作用域`
+1. `类作用域`
+1. `命名空间作用域`
+1. `文件作用域`
 
 ### class和struct区别
 1. C++中的struct对C中的struct进行了扩充，可以有成员函数，可以被京城，可以有多台。
@@ -99,14 +122,60 @@ tags:
 
 ### const关键字作用
 
-### 虚函数中的delete，new，final
+### 虚函数中的delete，override，final
+1. `final`在基类中指定无法在派生类中重写的虚函数。还可以指定无法继承的类。
+
+### explicit
+1. explicit只能用来修饰类构造函数。作用是声明类构造函数是显示调用的，不能隐式调用。
+1. 只能显示使用`ClassXX a(args)`来创建对象，不能使用`ClassXX a = args`来隐士调用构造函数。
+1. 作为函数参数也必须使用`ClassXX(args)`，不能使用`args`隐式调用构造函数。
+1. 能用就用。
+
+### move
+
+### 左值(lvalue) 右值(rvalue)
+1. 左值：占据内存中某个可识别位置的对象
+1. 如果表达式的结果是一个暂时的对象，那么这个表达式就是右值。
+
+### && rvalue reference 右值引用
+1. 只有左值才能给引用`int nine = 9; int& ref = nine;` 不能`int& ref = 9;`，也不能`int& ref = get_value()`
+1. 右值引用用法：`int&& ref = 9`或`int&& ref = get_value()`
 
 ### 友元
 1. 友元函数
 2. 友元类
 3. 友元成员函数
 
-###
+### decltype
+1. 获取变量的类型。`int x; decltype(x) y; // y is int`
+2. 可以用于匿名结构体。
 
 
-## basic
+### "add pointer and is pointer  remove_pointer"
+1. 都是类模板，定义在std中
+1. `add_pointer<T>`：T可以是具体类型也可以是类型引用。获取类型的指针，保存在type成员变量里。一般和typede一起使用`typedef std::add_pointer<x>::type IntPtr; IntPtr i;`
+
+
+## Design Patterns
+### 工厂模式
+### 单例模式
+1. 目的： 保证一个类只有一个实例，并且提供一个访问它的全局访问点，该实例被所有程序模块共享
+1. [reference](https://zhuanlan.zhihu.com/p/37469260)
+1. code
+
+``` c++
+class Singleton
+{
+ private:
+	Singleton() { };  // 私有构造函数，拷贝构造函数和赋值函数，防止创建对象。
+	~Singleton() { };
+	Singleton(const Singleton&);
+	Singleton& operator=(const Singleton&);
+ public:
+	static Singleton& get_instance()
+    {
+		static Singleton instance;  // 使用local static对象，只在第一次访问get_instance才创建
+		return instance;
+	}
+};
+```
