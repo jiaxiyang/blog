@@ -21,6 +21,8 @@ tags:
 ## Zero Cost Abstract
 
 ## Lambdas
+1. 用于定义和创建匿名函数。
+1. 语法： `[capture list] (params list) mutable exception -> return type { function body}`
 
 ## Move Semantics
 
@@ -29,6 +31,7 @@ tags:
 1. 使用typename标识嵌套类型名称。
 1. 使用从属类型时要加typename。比如：`typename T::const_iterator iter()`不加typename会报错，因为编译器并不知道T::const_iterator是一个类型的名字还是摸个变量的名字。
 1. 可变参数模板(c++11之前参数个数固定不可变)：`template<typename... Args> class test`表示Args个数不固定，使用时`void f(Args... args)`
+1. `template <typename T> using xxx = T`
 
 ## Macros
 ### #define
@@ -84,9 +87,11 @@ tags:
 ### static
 1. 局部static变量只被初始化一次，生命周期是从创建到程序结束。相比全局static变量只是作用域不是全局。
 1. 如果全局变量仅在单个函数中使用，则可以将这个变量改为该函数的静态局部变量。
-1. 全局变量，静态局部变量，静态全局变量都存在静态存储区。
+1. 全局变量，静态局部变量，静态全局变量都存在全局静态存储区。
 1. 函数中必须要使用statci变量的情况：当某个函数返回值为指针类型时，则必须是static的局部变量的地址作为返回值，因为他的生命周期是整个程序运行期间。
 1. static全局变量限定作用范围为定义该变量的文件。
+1. 子类访问父类定义的static成员变量或函数`Son::Parent::xxx()`
+1. static存储在全局静态存储区，因此父类中定义的static变量由所有子类父类对象共享。
 
 ### 作用域
 1. `全局作用域`
@@ -150,8 +155,10 @@ tags:
 1. 获取变量的类型。`int x; decltype(x) y; // y is int`
 2. 可以用于匿名结构体。
 
+### constexpr
 
-### "add pointer and is pointer  remove_pointer"
+
+### add pointer and is pointer remove_pointer
 1. 都是类模板，定义在std中
 1. `add_pointer<T>`：T可以是具体类型也可以是类型引用。获取类型的指针，保存在type成员变量里。一般和typede一起使用`typedef std::add_pointer<x>::type IntPtr; IntPtr i;`
 
@@ -179,3 +186,14 @@ class Singleton
 	}
 };
 ```
+### 代理模式
+
+## Program with C
+
+
+## 接口实现分离
+1. `Pimplldiom`(防火墙技术，代理模式？(未提供一个抽象接口)) 将实现细节隐藏于指针背后，比如：分成两个类，一个负责提供接口，一个负责提供实现。负责提供实现的类的对象作为负责提供接口类的私有成员。这种方式只能不能像工厂函数一样由多种实现，因为类中写死了一种实现方式。
+2. `Object Inerface` 将接口定义为抽象类，派生类实现这些借口。类似工厂函数(创建型设计模式)。
+
+### Reference
+1. [reference](https://blog.csdn.net/TAOKONG1017/article/details/79561856)
