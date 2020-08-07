@@ -8,6 +8,10 @@ tags:
 - Cpp
 ---
 
+## ideas
+1. 记录语法时最好能举个例子
+
+
 ## C++ language features
 
 ## Lifetime
@@ -93,6 +97,10 @@ tags:
 1. 子类访问父类定义的static成员变量或函数`Son::Parent::xxx()`
 1. static存储在全局静态存储区，因此父类中定义的static变量由所有子类父类对象共享。
 
+### 操作符重载
+
+### copy构造函数，赋值构造函数
+
 ### 作用域
 1. `全局作用域`
 1. `局部作用域`
@@ -162,6 +170,11 @@ tags:
 1. 都是类模板，定义在std中
 1. `add_pointer<T>`：T可以是具体类型也可以是类型引用。获取类型的指针，保存在type成员变量里。一般和typede一起使用`typedef std::add_pointer<x>::type IntPtr; IntPtr i;`
 
+### std::function
+1. std::function是通用多态函数封装器。
+1. 定义：`template < class R, class... Args> class function<R(Args...)` R为返回类型，Args为参数。
+1. 例子：`void p(int i) { cout << i;};  std::fuction<void<int>> f = p; f(i);`
+1. 可用来实现函数回调
 
 ## Design Patterns
 ### 工厂模式
