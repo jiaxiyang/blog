@@ -36,17 +36,23 @@ tags:
 1. 使用从属类型时要加typename。比如：`typename T::const_iterator iter()`不加typename会报错，因为编译器并不知道T::const_iterator是一个类型的名字还是摸个变量的名字。
 1. 可变参数模板(c++11之前参数个数固定不可变)：`template<typename... Args> class test`表示Args个数不固定，使用时`void f(Args... args)`
 1. `template <typename T> using xxx = T`
+### 模板嵌套
 
 ## Macros
 ### #define
-### typedefine
 
 ## Reflection
+1. 反射字面意思：由类型名映射到类型对象？
+1. 反射技术以其明确分离描述系统自身结构、行为的信息与系统所处理的信息，建立可动态操纵的因果关联以动态调整系统行为的良好特征，已经从理论和技术研究走向实用化，使得动态获取和调整系统行为具备了坚实的基础。当需要编写扩展性较强的代码、处理在程序设计时并不确定的对象时，反射机制会展示其威力，反射技术以其明确分离描述系统自身结构、行为的信息与系统所处理的信息，建立可动态操纵的因果关联以动态调整系统行为的良好特征，已经从理论和技术研究走向实用化，使得动态获取和调整系统行为具备了坚实的基础。当需要编写扩展性较强的代码、处理在程序设计时并不确定的对象时，反射机制会展示其威力，这样的场合主要有：
+   - 序列化（Serialization）和数据绑定（Data Binding）
+   - 远程方法调用（Remote Method Invocation RMI）
+   - 对象/关系数据映射（O/R Mapping）。
 1. 由于c++中的类结构可读性差，难以调试，协议升级困难等缺点，导致xml与json等自注释文本协议普及。但`文本协议`（文件里方便阅读理解）与`内存模型`（内存上）存在差异，需要有序列化与反序列化对象的操作。序列化：将文本转化为类对象，反序列化：将类对象转化为文本。开发者需要写大量重复代码去进行序列化与反序列化操作。Java为解决这个问题添加了反射机制:将类型信息编译到class文件中，并利用这些信息提供统一的序列化与反序列化功能。
-1. 如何通过类的名称来生成新的对象？例：`ClassXX object = new "ClassXX"`, C++使用：`ClassXX object = new ClassXX(x)` 工厂函数是通过在工厂函数里指定tpye来生成，不是通过类名。`ClassXX object = ClassXX::create(x)`
+1. 反射基本功能之一：如何通过类的名称来生成新的对象？例：`ClassXX object = new "ClassXX"`, C++使用：`ClassXX object = new ClassXX(x)` 工厂函数是通过在工厂函数里指定tpye来生成，不是通过类名。`ClassXX object = ClassXX::create(x)`
 1. 实现方法：
    - 每一个类都创建一个产生对象的函数
    - 设计一个总的工厂类，类中使用map保存(类名，函数)。通过共产类创建对象。因为全局只需要一个工厂类的对象，因此使用单例模式设计工厂类。
+1. 编程语言的反射机制所能实现的功能还有通过类名称字符串获取类中属性和方法，修改属性和方法的`访问权限`等，系统运行起来之后可修改类属性方法权限，厉害。
 ### Reference
 1. [concept](https://zhuanlan.zhihu.com/p/70044481)
 1. [sample](https://blog.csdn.net/K346K346/article/details/51698184)
@@ -99,7 +105,8 @@ tags:
 
 ### 操作符重载
 
-### copy构造函数，赋值构造函数
+### 构造函数，copy构造函数，赋值构造函数
+1. 全局对象的构造函数在程序进入 main() 函数之前执行
 
 ### 作用域
 1. `全局作用域`
@@ -108,6 +115,35 @@ tags:
 1. `类作用域`
 1. `命名空间作用域`
 1. `文件作用域`
+
+### 函数指针
+
+1. 声明
+
+``` c++
+double cal(int);   // prototype
+double (*pf)(int);   // 指针pf指向的函数， 输入参数为int,返回值为double
+pf = cal;    // 指针赋值
+```
+
+1. 作为函数参数
+
+``` c++
+void estimate(int lines, double (*pf)(int));  // 函数指针作为参数传递
+double y = (*pf)(5);   // 通过指针调用， 推荐的写法
+double y = pf(5);     // 这样也对， 但是不推荐这样写
+```
+
+### typedef
+1.  任何声明变量的语句前面加上typedef之后，原来是变量的都变成一种类型。不管这个声明中的标识符号出现在中间还是最后。
+1. 作用：
+   - 促进跨平台开发
+   - 定义易于记忆的类型名
+1. 使用：
+   - `typedef int* IntPtr; int x = 5; IntPtr = &x; *IntPtr = 1;`
+   - `typedef void (*call_back)(int)； void add_one(int i) {return i+1}; call_back = add_one; call_back(2);` call_back声明为函数指针
+
+
 
 ### class和struct区别
 1. C++中的struct对C中的struct进行了扩充，可以有成员函数，可以被京城，可以有多台。
@@ -178,6 +214,17 @@ tags:
 
 ## Design Patterns
 ### 工厂模式
+1. 目的：将对象的创建与对象的使用解耦。
+1. `简单工厂函数` 将对象的创建放入到统一工厂函数中，根据类型判断具体创建哪一种类型对象。相当于将耦合问题从使用中转移到工厂函数。扩展性差，每增加一个产品就要修改工厂函数。
+1. `工厂方法模式` 每个产品都有一个工厂函数，相当于将耦合从总的工厂函数中转移到各个产品的工厂函数中，问题：使用时需要包含各个工厂头文件。
+1. `抽象工厂模式` 同工厂方法模式，只不过每一个具体工厂可以可以调不同接口（不是同一个接口传参数）创建不同的产品。
+1. `反射` 由类名来创建对象。相当于工厂方法模式+单例模式。全局有一个总的工厂，工厂里有保存产品类型及其工厂函数的map表(使用到函数指针)，每个产品都要有一个工厂，并且需要注册到总的工厂map表中。解决了工厂方法模式中使用问题。
+1. `模板工厂模式`
+#### Reference
+1. [factory method](https://www.cnblogs.com/xiaolincoding/p/11524401.html)
+1. [reflection](https://blog.csdn.net/K346K346/article/details/51698184)
+
+
 ### 单例模式
 1. 目的： 保证一个类只有一个实例，并且提供一个访问它的全局访问点，该实例被所有程序模块共享
 1. [reference](https://zhuanlan.zhihu.com/p/37469260)
@@ -210,3 +257,7 @@ class Singleton
 
 ### Reference
 1. [reference](https://blog.csdn.net/TAOKONG1017/article/details/79561856)
+
+
+## 原则
+1. `开闭原则` 软件中的对象（类，模块，函数等等）应该对于扩展是开放的，但是对于修改是封闭的
