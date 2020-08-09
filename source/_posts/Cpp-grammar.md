@@ -18,6 +18,7 @@ tags:
 ## Lifetime
 
 ## Smart Pointers
+1.
 
 ## Cast
 
@@ -165,6 +166,26 @@ double y = pf(5);     // 这样也对， 但是不推荐这样写
 
 ### 左值和右值
 
+### for each any_of
+
+### rang-based for loop
+
+### Structured Bindings
+1 `const auto &[elem1, elme2] = some_thing;` c++17
+
+### concepts c++20
+
+### string_view c++17
+
+### std::format c++20
+
+### ranges c++20
+
+### std::forward
+
+### const
+
+
 ### c中的const和c++中的const区别
 1. c语言中只有enum能实现真正的常量
 
@@ -172,7 +193,7 @@ double y = pf(5);     // 这样也对， 但是不推荐这样写
 
 ### const关键字作用
 
-### 虚函数中的delete，override，final
+### default， delete，override，final
 1. `final`在基类中指定无法在派生类中重写的虚函数。还可以指定无法继承的类。
 
 ### explicit

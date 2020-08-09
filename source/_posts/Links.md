@@ -7,6 +7,10 @@ tags:
 - Links
 ---
 
+
+## Design Patterns
+1. [Refactoring Guru](https://refactoring.guru/)
+
 ## Rust
 1. [Officail website](https://www.rust-lang.org/)
 1. [Official resource](https://www.rust-lang.org/learn)
@@ -31,6 +35,7 @@ tags:
 
 ## C++
 1. [Cppreference](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
+1. [CppInsights](https://cppinsights.io/)
 1. [CppCon](https://cppcon.org/)
 1. [Back to Basics](https://cppcon.org/b2b/)
 1. [Youtube CppCon video](https://www.youtube.com/user/CppCon/)
