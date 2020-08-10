@@ -22,7 +22,10 @@ tags:
 1. [tldr](https://github.com/tldr-pages/tldr)
 1. [vimium](https://github.com/philc/vimium)
 
-## [GNU binutils](https://www.gnu.org/software/binutils/)
+## Binary Utils
+### [Google bloaty](https://github.com/google/bloaty)
+
+### [GNU binutils](https://www.gnu.org/software/binutils/)
 1. `ar` : 创建静态库，插入删除，列出和提取成员。
 1. `strings` : 列出一个目标文件中所有可打印的字符串。
 1. `strip` : 从目标文件中删除符号表信息。

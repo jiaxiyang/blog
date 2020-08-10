@@ -18,7 +18,69 @@ tags:
 ## Lifetime
 
 ## Smart Pointers
+### unique_ptr
+1. 防止内存泄露，使所有权清晰。
+1. 唯一所有权， 不能复制，只能move
+1. 有一个Deleter成员变量
+1. 有两个参数，Deleter有默认
+1. 智能指针传参和返回值应该`按值传递`，这样更简单，而且只会消耗很小的资源(8字节)，栈上传递，很快.
+1. 不要通过引用传递指针
+
+``` c++
+template<class T, class Deleter = std::default_delete<T>>
+class unique_ptr {
+    T* p_= nullptr;
+    Deleter d_;
+
+    ~unique_ptr() {
+        if (p_) d_(p_);
+    }
+}
+
+template<class T>
+struct default_delete {
+    void operator()(T* p) const {
+        delete p;
+    }
+}
+
+```
+
+1. 需要调用free, close等地方，可以封装为unique_ptr, sample:
+
+``` c++
+struct FileClose {
+    void operator()(File *fp) const {
+        assert(fp != nullptr);
+        fclose(fp);
+    }
+}
+
+File *fp = fopen("input.txt", "r");
+std::unique_ptr<File, FileClose> uptr(fp);
+```
+
+
+### shared_ptr
+1. 避免悬垂指针。
+1. shared mean reference counting引用计数
+1. "Will the last person out of the room please turn out the lights." 最后一个离开房间的人请关灯，人数就相当于引用计数，灯相当于共享的资源。最后一个释放资源。如果房间里还有人就把灯关了，剩下的人就相当于悬垂指针。
+1. 栈上有两部分ptr to T and ptr to control block。分别指向堆上数据。
+1. uniqe_ptr可以转化为shared_ptr，反之不成立。
+
+### make_shared and make_unique
+1. 现代的c++应该避免使用raw new and delete，智能指针可以避免使用delete，我们也应该避免使用new，工厂函数能够避免new。
+1. make_shared and make_unique都是`工厂函数`。make_shared能够产生一个shared_ptr，make_unique能够产生一个unique_ptr
+1. `最好不要使用rall pointer`，。如果不用rall pointer，就不用担心内存泄露。
+
+### weak_ptr
+2. weak_ptr可以告诉你xuan
+1. weak_ptr has the same physical layout ad shared_ptr
+1. weak_ptr不是智能指针。不能对weak_ptr解引用
+1. weak_ptr可以看作是获取shared_ptr的 ticket，如果拥有weak_ptr就有权获得shared_ptr。
 1.
+
+### std::enable_shared_from_this
 
 ## Cast
 
@@ -170,8 +232,15 @@ double y = pf(5);     // 这样也对， 但是不推荐这样写
 
 ### rang-based for loop
 
-### Structured Bindings
-1 `const auto &[elem1, elme2] = some_thing;` c++17
+### std::tie
+1. 创建tuple的左值引用
+1. 可以用来解tuple
+1. c++17之后可以被structured bindings替代
+
+### Structured Bindings c++17
+1. `const auto &[elem1, elme2] = some_thing;`
+1. 类似引用，结构化绑定是既存对象的别名。不同于引用的是，结构化绑定的类型不必为引用类型。
+1. [reference](https://zh.cppreference.com/w/cpp/language/structured_binding)
 
 ### concepts c++20
 
@@ -180,6 +249,8 @@ double y = pf(5);     // 这样也对， 但是不推荐这样写
 ### std::format c++20
 
 ### ranges c++20
+
+### fold expressions
 
 ### std::forward
 
@@ -203,9 +274,16 @@ double y = pf(5);     // 这样也对， 但是不推荐这样写
 1. 能用就用。
 
 ### move
+1. move unconditionally casts its input into an rvalue reference(无变量保存的数据)
+1. move does not move anything.
+1. move constructor `ClassXX(ClassXX&& w) = default` w是右值引用
+1. move assignment operator `ClassXX& operator=(ClassXX&& w) = default`
+
+### std::forward
+
 
 ### 左值(lvalue) 右值(rvalue)
-1. 左值：占据内存中某个可识别位置的对象
+1. 左值：占据内存中某个可识别位置（有变量保存）的对象
 1. 如果表达式的结果是一个暂时的对象，那么这个表达式就是右值。
 
 ### && rvalue reference 右值引用
@@ -234,13 +312,16 @@ double y = pf(5);     // 这样也对， 但是不推荐这样写
 1. 例子：`void p(int i) { cout << i;};  std::fuction<void<int>> f = p; f(i);`
 1. 可用来实现函数回调
 
+### std::atomic
+
+
 ## Design Patterns
 ### 工厂模式
 1. 目的：将对象的创建与对象的使用解耦。
 1. `简单工厂函数` 将对象的创建放入到统一工厂函数中，根据类型判断具体创建哪一种类型对象。相当于将耦合问题从使用中转移到工厂函数。扩展性差，每增加一个产品就要修改工厂函数。
 1. `工厂方法模式` 每个产品都有一个工厂函数，相当于将耦合从总的工厂函数中转移到各个产品的工厂函数中，问题：使用时需要包含各个工厂头文件。
 1. `抽象工厂模式` 同工厂方法模式，只不过每一个具体工厂可以可以调不同接口（不是同一个接口传参数）创建不同的产品。
-1. `反射` 由类名来创建对象。相当于工厂方法模式+单例模式。全局有一个总的工厂，工厂里有保存产品类型及其工厂函数的map表(使用到函数指针)，每个产品都要有一个工厂，并且需要注册到总的工厂map表中。解决了工厂方法模式中使用问题。
+1. `反射` 由类名来创建对象。相当于工厂方法模式+单例模式。全局有一个总的工厂，工厂里有保存产品类型及其工厂函数的map表(使用到函数指针)，每个产品都要有一个工厂，并且需要注册到总的工厂map表中。解决了工厂方法模式中使用问题。map可以使用全局变量，注册函数写成类的静态函数，就不需要专门设计一个总的工厂类。
 1. `模板工厂模式`
 #### Reference
 1. [factory method](https://www.cnblogs.com/xiaolincoding/p/11524401.html)
@@ -283,3 +364,8 @@ class Singleton
 
 ## 原则
 1. `开闭原则` 软件中的对象（类，模块，函数等等）应该对于扩展是开放的，但是对于修改是封闭的
+1. `单一职责原则`
+1. `里氏替换原则`
+1. `依赖倒置原则`
+1. `迪米特法则`
+1. `借口隔离原则`
