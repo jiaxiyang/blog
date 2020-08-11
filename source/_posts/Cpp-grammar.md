@@ -244,8 +244,6 @@ double y = pf(5);     // 这样也对， 但是不推荐这样写
 
 ### 函数调用的过程
 
-### 左值和右值
-
 ### for each any_of
 
 ### rang-based for loop
@@ -294,16 +292,19 @@ double y = pf(5);     // 这样也对， 但是不推荐这样写
 1. 能用就用。
 
 ### move
-1. move unconditionally casts its input into an rvalue reference(无变量保存的数据)
-1. move does not move anything.
+1. move unconditionally casts its input into an rvalue reference(无变量保存的数据)，会将输入变为右值。
+1. move does not move anything. （只是所有权移动，为物理移动任何东西）
 1. move constructor `ClassXX(ClassXX&& w) = default` w是右值引用
 1. move assignment operator `ClassXX& operator=(ClassXX&& w) = default`
+1. 类成员最好用智能指针。原始指针不能使用默认move构造函数。需要自己写move构造函数， 分两步： member-wise move and reset。
+1. make move operations(constructor) noexcept
 
 ### std::forward
 
 
 ### 左值(lvalue) 右值(rvalue)
 1. 左值：占据内存中某个可识别位置（有变量保存）的对象
+1. 右值：临时存储，没有变量标识。
 1. 如果表达式的结果是一个暂时的对象，那么这个表达式就是右值。
 
 ### && rvalue reference 右值引用
