@@ -12,6 +12,9 @@ tags:
 1. [Picture of Design Patterns](https://design-patterns.readthedocs.io/zh_CN/latest/index.html)
 1. [Awesome Design Patterns](https://github.com/DovAmir/awesome-design-patterns)
 
+## Concurrent Programming
+1. youtube video
+
 ## C++
 1. [Cppreference](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
 1. [Awesome cpp](https://github.com/fffaraz/awesome-cpp#readme)

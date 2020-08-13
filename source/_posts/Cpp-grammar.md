@@ -25,6 +25,11 @@ tags:
 
 ## C++ language features
 
+## OOP
+1. Object-Oriented Programming
+1. base class: defines the API
+1. derived classes: provide different implementaions
+
 ## Lifetime
 
 ## Smart Pointers
@@ -92,17 +97,70 @@ std::unique_ptr<File, FileClose> uptr(fp);
 
 ### std::enable_shared_from_this
 
+
+
 ## Cast
 
-## RALL
+## RALL Resource Acquisition Is Initalization
+1. The slogan is about initialization, but its meaning is ready about cleanup.
+1. `resource`: anything that requires specail(manual) management.
+   - Allocated memory(molloc/free, new/delete)
+   - POSIX file handles(open/close)
+   - C FILE handles(fopen/fclose)
+   - Mutex locks(pthread_mutex_lock/pthread_mutex_unlock)
+   - C++ threads(spawn/join)
+   - objective-c resource-counted objects(retain/release)
+
+### 构造函数，copy构造函数，copy赋值构造函数，move构造函数，move赋值构造函数
+1. 全局对象的构造函数在程序进入 main() 函数之前执行
+1. Initialization is not assignment.
+1. `T w = v;` This is an initialization(construction) of a new object. It calls a copy constructor.
+1. `T w; w = v;` This is an assignment to the existing object w. It calls an assignment operator.
+1. 使得函数default可能提醒他人调用default是可以正常工作的。
+1. 资源释放应该放到析构函数中，避免资源泄露。
+1. 赋值构造函数最好使用copy-and-swap.这样可以解决self-copy等问题。
+
+``` c++
+// copy assignment constructor
+T& T::operator=(const T& rhs) {
+    T copy(rhs);  // 调用copy构造函数
+    copy.swap(*this);  // good
+    return *this;
+}  // copy will be destruct
+
+// move assignment constructor
+T& T::operatr=(T&& rhs) {
+    T copy(std::move(rhs));  // rhs现在是左值？
+    copy.swap(*this);
+    return *this;
+}
+
+```
+
+###  The Rule of Three or Five(after c++11)
+1. 含义：如果类里面需要管理resource，例如rall pointer，那么你需要手写3个functions.否则会调用默认函数，可能会出现多个指针副本，引起悬垂指针等问题。（可以delete这些函数，使non-copyalble)
+   - A destructor to free the resource
+   - A copy constructor to copy the resource
+   - A copy assignment operator to free the left-hand resource and copy the right-hand one.
+   - A move constructor to transfer owenership of resource (after c++11)
+   - A move assignment operator to free the left-hand resource and transfer ownership of the right-hand one(after c++11)
+
+### The Rule of Zero
+1. 含义：如果你的类没有管理任何资源，但是使用了库中的vector，string等，那么你应该避免写特殊的函数，使用默认函数。
+   - Let the compiler implicitly generate a default destructor
+   - Let the compiler generate the copy constructor
+   - Let the compiler generate the copy assignment operator
+   - (But your own swap might improve performance)
+
+### 两种设计良好的value-semantic C++类
+1. Bussiness-logic classes: 不管理资源，follow the Rule of Zero
+1. Resource-management classes(small, single purpose)： 管理资源，follow the Rule of Three or Five.
 
 ## Zero Cost Abstract
 
 ## Lambdas
 1. 用于定义和创建匿名函数。
 1. 语法： `[capture list] (params list) mutable exception -> return type { function body}`
-
-## Move Semantics
 
 ## Template
 1. typename关键字用于引入一个模板参数
@@ -140,7 +198,6 @@ std::unique_ptr<File, FileClose> uptr(fp);
 1. 构造方法注入： a构造函数中将b作为参数传递。
 1. 工厂模式注入： 将b的工厂传递给a。
 
-## OOP
 
 ## Memory
 1. 内存分为host内存和device内存。需要管理device上需要大空间的对象，比如tensor，还需要在host和device内存中传输数据。输入的数据在host端处理后需要发送到device上使用，device上输出结果或dump的数据需要在host端显示或者保存。不同的设备管理方式不同，当设备段是直接通过物理地址管理内存的，可以在host端创建一个对象来管理设备端的内存。
@@ -186,9 +243,6 @@ std::unique_ptr<File, FileClose> uptr(fp);
 1. static存储在全局静态存储区，因此父类中定义的static变量由所有子类父类对象共享。
 
 ### 操作符重载
-
-### 构造函数，copy构造函数，赋值构造函数
-1. 全局对象的构造函数在程序进入 main() 函数之前执行
 
 ### 作用域
 1. `全局作用域`
@@ -284,6 +338,7 @@ double y = pf(5);     // 这样也对， 但是不推荐这样写
 
 ### default， delete，override，final
 1. `final`在基类中指定无法在派生类中重写的虚函数。还可以指定无法继承的类。
+1. 当使用default或者delete定义构造，析构，复制构造，赋值，move...其中一个时，也需要定义其他的。
 
 ### explicit
 1. explicit只能用来修饰类构造函数。作用是声明类构造函数是显示调用的，不能隐式调用。
@@ -297,15 +352,24 @@ double y = pf(5);     // 这样也对， 但是不推荐这样写
 1. move constructor `ClassXX(ClassXX&& w) = default` w是右值引用
 1. move assignment operator `ClassXX& operator=(ClassXX&& w) = default`
 1. 类成员最好用智能指针。原始指针不能使用默认move构造函数。需要自己写move构造函数， 分两步： member-wise move and reset。
+1. move asignment operator分3步： cleanup, member-wise move and reset
 1. make move operations(constructor) noexcept
+1. Don't return a T&&.
 
-### std::forward
-
+### forward
+1. `& & = &`, `& && = &`, `&& & = &`, `&& && = &&`  变量，是lvalue
+1. `void f(T&& x); auto&& var = var1;` 其中T&&和auto&&是forward reference(T类型不确定，T&&类型要通过推导（模板），如果T是确定的，那么是右值引用，如类的move构造函数T就是类名称)。转发引用。被称为universal reference.
+1. forward reference作为参数能接受左值也能接受右值。
+1. 应用: `make_unique`可以传左值和右值。`auto i = make_unique<int>(1); auto s1_ptr = make_unique<string>(s1)`
+1. std::forward（不是forward reference, 是标准库函数）作用： 如果输入是lvalue，将其转化为lvalue reference，如果是rvalue，将其转化为rvalue reference。使用原因：当一个函数输入参数是右值，并且需要用到该参数调用其他函数，调用时会将右值转化为左值，因为有了名字。在调用的函数中被当做左值来处理。如果希望是右值，则实现不了。在调用其他函数时，将参数通过std::forward转化一下
+1. std::forward does not forward anything。
+1. 问题：forward reference作为模板的参数时能接收任何参数，容易与其他函数冲突。
 
 ### 左值(lvalue) 右值(rvalue)
 1. 左值：占据内存中某个可识别位置（有变量保存）的对象
 1. 右值：临时存储，没有变量标识。
 1. 如果表达式的结果是一个暂时的对象，那么这个表达式就是右值。
+1. 如果函数能直接返回，不要起名字。return右值，否则要使用move。(RVO)
 
 ### && rvalue reference 右值引用
 1. 只有左值才能给引用`int nine = 9; int& ref = nine;` 不能`int& ref = 9;`，也不能`int& ref = get_value()`
