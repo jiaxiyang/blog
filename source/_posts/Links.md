@@ -17,12 +17,13 @@ tags:
 
 ## C++
 1. [Cppreference](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
-1. [Awesome cpp](https://github.com/fffaraz/awesome-cpp#readme)
-1. [CppInsights](https://cppinsights.io/)
+1. [Bjarne Stroustrup](https://youtube.com/results?search_query=Bjarne+Stroustrup)
 1. [CppCon](https://cppcon.org/)
 1. [Back to Basics](https://cppcon.org/b2b/)
 1. [Youtube CppCon video](https://www.youtube.com/user/CppCon/)
 1. [CppCon resources](https://github.com/CppCon)
+1. [Awesome cpp](https://github.com/fffaraz/awesome-cpp#readme)
+1. [CppInsights](https://cppinsights.io/)
 1. [Lifetime analysis for everyone](https://github.com/CppCon/CppCon2019/blob/master/Presentations/lifetime_analysis_for_everyone/lifetime_analysis_for_everyone__matthias_gehre_gabor_horvath__cppcon_2019.pptx)
 1. [Interview](https://github.com/huihut/interview)
 1. [CS-Notes](https://github.com/CyC2018/CS-Notes)

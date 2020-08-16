@@ -9,6 +9,8 @@ tags:
 
 ## Programming experience
 1. 最重要的是`官方资源`，看英文原文，如rust官网教程，c++ cppcon会议。
+1. 找`最专业`的，从原理上学习。如rust设计者讲rust，git原理。
+1. 找`创始人相关`视频学习，如Bjarne Stroustrup c++视频，Linus Torvalds git原理。Richard Stallman emacs.
 1. `先见识，再模仿，后摸索`。`Good artist copy, great artist steal` 学习新语言，可以先看看视频教程，再自己摸索。
 1. 有`目标`或者`带着问题`看文档或代码。
 1. 无论是整体还是模块，都要先弄清楚模块`目的`，再学习`基本概念`, 然后学习`框架和设计模式`，最后再学习具体代码。
@@ -29,7 +31,6 @@ tags:
 1. 查看开发者的github找资料
 1. 先`模仿`github开源代码。youtube视频教程。
 1. 随时写一些简单的例子验证想法。很重要。
-1. 找`最专业`的，从原理上学习。如rust设计者讲rust，git原理。
 1. Github awesome系列，awesome emacs, shell，rust
 1. emacs org管理项目，todo，日志
 1. 遇见问题记得看github issues
