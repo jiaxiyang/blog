@@ -17,7 +17,8 @@ tags:
 
 ## C++
 1. [Cppreference](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
-1. [Bjarne Stroustrup](https://youtube.com/results?search_query=Bjarne+Stroustrup)
+1. [Bjarne Stroustrup](https://stroustrup.com/videos.html)
+1. [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines)
 1. [CppCon](https://cppcon.org/)
 1. [Back to Basics](https://cppcon.org/b2b/)
 1. [Youtube CppCon video](https://www.youtube.com/user/CppCon/)
