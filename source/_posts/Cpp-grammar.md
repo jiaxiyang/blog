@@ -12,7 +12,7 @@ tags:
 1. 记录语法时最好能举个例子
 1. `why?`。模块`存在的目的？解决了什么问题？特点特性？优缺点？适用范围？概念？架构？设计思路？具体实现方式？`等方面学习？
 1. 模块的存在的目的，功能作用，实现方式
-
+1. 按照Bjarny Stroustrup列的特性重新进行分类。
 
 ## 原则
 1. `开闭原则` 软件中的对象（类，模块，函数等等）应该对于扩展是开放的，但是对于修改是封闭的
@@ -203,7 +203,12 @@ std::unique_ptr<File, FileClose> uptr(fp);
 1. 用于定义和创建匿名函数。
 1. 语法： `[capture list] (params list) mutable exception -> return type { function body}`
 
-## Template
+## Generic Programming
+1. 泛型编程是为算法流程编写的，不是为数据结构，使算法通用化，可以适应不同的数据结构。
+1. 可以先写一个具体的例子，抽象出算法，屏蔽数据结构（类型）。
+1. `A type: specifies the set of operations that can be applied to an object and specifies how an object is laid out in memory` 类型不仅规定对象的操作集合，还规定对象在内存中的排布
+1. `A concept: Specifies the set of operations that can be applied to an object and says nothing about the layout of the object` Concept只规定对象的操作集合，不规定对象在内存中的排布。
+### Template
 1. typename关键字用于引入一个模板参数
 1. 使用typename标识嵌套类型名称。
 1. 使用从属类型时要加typename。比如：`typename T::const_iterator iter()`不加typename会报错，因为编译器并不知道T::const_iterator是一个类型的名字还是摸个变量的名字。

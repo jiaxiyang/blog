@@ -30,6 +30,7 @@ tags:
 
 ## Keys C++ "Rules of Thumb"
 1. A `static type system` with equal support for build-in and user-defined types
+   - A type: specifies the set of operations that can be applied to an object and specifies how an object is laid out in memory
    - A static type system: the base of all
    - compile-time error detection
    - performance
@@ -122,3 +123,14 @@ tags:
    - Unless you really, really need to
    - Hide messy code behind clean interfaces
 1. Alwasy measure
+
+## Write better code
+1. Cleaner
+2. Simpler
+3. More readable
+4. More maintainable
+5. Faster
+6. Less clever
+7. More general
+8. More usable and re-usable
+9. Type safe
