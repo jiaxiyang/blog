@@ -8,6 +8,66 @@ tags:
 - Cpp
 ---
 
+## What is C++20?
+1. The best approximation of C++'s ideals so far.
+1. As big an improvement over C++11 as C++11 was over C++98: A major "release"
+1. Lots of useful features
+   - Simpler, more expressive, faster code that compiles faster
+   - Modeles
+   - Concepts
+   - Coroutines
+   - Ranges
+   - Dates
+   - Span
+   - Better compile-time programing support
+   - Many "minor features"
+1. C++23 and C++26 is better than C++20, not the major "release".
+1. Diretly learn C++20. It's the outside layer of the onion.
+1. C++23:
+   - "Completes C++20"
+   - Plus: standard modules, library support for coroutines, executors & networking
+   - Maybe: static reflection, pattern matching
+
+## Keys C++ "Rules of Thumb"
+1. A `static type system` with equal support for build-in and user-defined types
+   - A static type system: the base of all
+   - compile-time error detection
+   - performance
+   - flexibility through compile-time resolution(overloading, generic programming, metaprogramming...)
+1. `Value and reference semantics`
+   - value types: Inegers, characters, strings, containers,...
+   - Pointers/references: T*, T&, unique_ptr<T>, Forward_iterator
+1. `Direct use` of machine and operating system resources
+   - bitset and span(modern c++)
+   - the onion principle: the more layers you peel off, the more control, the more error.
+1. Systematic and general `resource management`(RALL)
+   - manage heap, file...
+   - every resource must have an owner: responsible for its cleanup.
+   - control the complete object life cycle: creation, copy, move, destruction
+1. Support `composition` of software from separately developed parts.
+   - modules
+   - all major features support composition: moduls, classes, concepts, templates, functions, aliases
+1. Support for `object-oriented programming`
+1. Support for `generic programming`
+   - concepts
+1. Support `compile-time programming`
+   - Move computation from run-time to compile-time(performace, do once)
+   - It's everywhere: overloading and virtual functions, templates, variadic templates, constexp functions...
+1. `Concurency` through libraries supported by intrinsics
+1. `Libraries`
+   - A user shouldn't have to care whether a feature is implemented in the language or in a library
+
+## Lower levels of abstaction
+1. Samples:
+   - Sizes
+   - Raw pointers
+   - Allocation and deallocation
+   - Loop-control variables
+   - Casts
+   - Macros
+1. Except as implementation details and asides
+1. Don't go to lower level if you have to.
+
 ## What really matters?
 1. People
 1. A programming language is a tool, not an end goal: peopeo want great systems, not programming languages.
@@ -52,3 +112,13 @@ tags:
 1. No language is perfect
    - for everthing
    - for everyone
+
+## C++ is tunable
+1. Make simple things simple
+   - Don't make complicated tasks impossible
+   - Don't make complicated tasks unreasonable hard to do
+   - The onion principle
+1. Don't drop to lower levels of abstraction
+   - Unless you really, really need to
+   - Hide messy code behind clean interfaces
+1. Alwasy measure
