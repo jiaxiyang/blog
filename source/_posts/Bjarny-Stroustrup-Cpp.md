@@ -1,8 +1,11 @@
 ---
-title: Bjarny-Stroustrup-Cpp
+title: Bjarny Stroustrup talk about cpp
 date: 2020-08-18 09:34:33
 categories:
+- Program
+- Cpp
 tags:
+- Cpp
 ---
 
 ## What really matters?
