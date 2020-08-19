@@ -59,6 +59,21 @@ tags:
 1. `Libraries`
    - A user shouldn't have to care whether a feature is implemented in the language or in a library
 
+## Philosophy (CppCoreGuidelines)
+1. Express ideas directly in code
+1. Write in ISO Stardard C++
+1. Express intent
+1. Ideally, a program should be statically type safe.
+1. Prefer compile-time checking to run-time checking.
+1. What cannot be checked at compile time should be checkable at run time
+1. Catch run-time errors early.
+1. Don't leak any resources.
+1. Don't waste time or space.
+1. Prefer immutable data to mutable data
+1. Encapsulate messy constructs, rather than spreading through the code.
+1. Use supporting tools as appropriate
+1. Use support libraries as appropriate
+
 ## Lower levels of abstaction
 1. Samples:
    - Sizes

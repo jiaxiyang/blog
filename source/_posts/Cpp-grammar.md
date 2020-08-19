@@ -142,7 +142,10 @@ T& T::operatr=(T&& rhs) {
 1. 只有左值才能给引用`int nine = 9; int& ref = nine;` 不能`int& ref = 9;`，也不能`int& ref = get_value()`
 1. 右值引用用法：`int&& ref = 9`或`int&& ref = get_value()`
 
-## Lifetime
+## Lifetime and Allocation Deallocation
+1. 指的是object lifetime，不是类。
+1. 对象涉及到生命周期和内存分配销毁两方面问题。一般生命周期起始分配内存，生命周期结束释放内存。但生命周期可能小于内存分配释放时间，比如option.
+1. reference能够延长临时变量生命周期。 `string & s = get_string();`无问题 `char *s = get_string().c_str();`有问题，get_string返回右值，s只接受了指针，右值内容被释放。
 
 ## Smart Pointers
 1. 用来管理raw pointer，属于资源管理类。
