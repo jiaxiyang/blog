@@ -29,9 +29,10 @@ tags:
    - Maybe: static reflection, pattern matching
 
 ## Keys C++ "Rules of Thumb"
-1. A `static type system` with equal support for build-in and user-defined types
+1. `A static type system` with equal support for build-in and user-defined types
    - A type: specifies the set of operations that can be applied to an object and specifies how an object is laid out in memory
    - A static type system: the base of all
+   - static mean compile time will determine all the type(not the run-time).
    - compile-time error detection
    - performance
    - flexibility through compile-time resolution(overloading, generic programming, metaprogramming...)

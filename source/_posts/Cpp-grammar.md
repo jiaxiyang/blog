@@ -29,6 +29,22 @@ tags:
 1. base class: defines the API
 1. derived classes: provide different implementaions
 
+## Generic Programming
+1. 泛型编程主要是为算法流程编写的，不是为数据结构，使算法通用化，可以适应不同的数据结构。
+1. 可以先写一个具体的例子，抽象出算法，屏蔽数据结构（类型）。
+1. `A type: specifies the set of operations that can be applied to an object and specifies how an object is laid out in memory` 类型不仅规定对象的操作集合，还规定对象在内存中的排布
+1. `A concept: Specifies the set of operations that can be applied to an object and says nothing about the layout of the object` Concept只规定对象的操作集合，不规定对象在内存中的排布。
+1. 模板类是比参数类型T更高一级的抽象。模板类实现高一级别的抽象，而不用关心低一级抽象的不同。
+
+### Template
+1. typename关键字用于引入一个模板参数
+1. 使用typename标识嵌套类型名称。
+1. 使用从属类型时要加typename。比如：`typename T::const_iterator iter()`不加typename会报错，因为编译器并不知道T::const_iterator是一个类型的名字还是摸个变量的名字。
+1. 可变参数模板(c++11之前参数个数固定不可变)：`template<typename... Args> class test`表示Args个数不固定，使用时`void f(Args... args)`
+1. `template <typename T> using xxx = T`
+
+### 模板嵌套
+
 ## RAII Resource Acquisition Is Initalization
 1. 资源获取初始化：`使用局部对象来管理资源的技术`被称为资源获取初始化。`局部对象`(有生命周期)是指存储在`栈`上的对象，它的生命周期由操作系统管理，无需人工介入。
 1. 利用： C++保证了所有栈对象在生命周期结束时会被销毁(调用析构函数)。
@@ -202,20 +218,6 @@ std::unique_ptr<File, FileClose> uptr(fp);
 ## Lambdas
 1. 用于定义和创建匿名函数。
 1. 语法： `[capture list] (params list) mutable exception -> return type { function body}`
-
-## Generic Programming
-1. 泛型编程是为算法流程编写的，不是为数据结构，使算法通用化，可以适应不同的数据结构。
-1. 可以先写一个具体的例子，抽象出算法，屏蔽数据结构（类型）。
-1. `A type: specifies the set of operations that can be applied to an object and specifies how an object is laid out in memory` 类型不仅规定对象的操作集合，还规定对象在内存中的排布
-1. `A concept: Specifies the set of operations that can be applied to an object and says nothing about the layout of the object` Concept只规定对象的操作集合，不规定对象在内存中的排布。
-### Template
-1. typename关键字用于引入一个模板参数
-1. 使用typename标识嵌套类型名称。
-1. 使用从属类型时要加typename。比如：`typename T::const_iterator iter()`不加typename会报错，因为编译器并不知道T::const_iterator是一个类型的名字还是摸个变量的名字。
-1. 可变参数模板(c++11之前参数个数固定不可变)：`template<typename... Args> class test`表示Args个数不固定，使用时`void f(Args... args)`
-1. `template <typename T> using xxx = T`
-
-### 模板嵌套
 
 ## Macros
 ### #define
