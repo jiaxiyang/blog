@@ -24,6 +24,12 @@ tags:
 
 ## C++ language features
 
+## Concurrency, Parallelism and Async
+1. Concurrency(并发): Less freedom for the scheduler(usually because of missing information)
+1. Parallelism(并行): More information provided to the scheduler(thus more freedom)
+1. Serial(串行：单线程) is between concurrency and parallelism.
+1.
+
 ## OOP
 1. Object-Oriented Programming
 1. base class: defines the API
