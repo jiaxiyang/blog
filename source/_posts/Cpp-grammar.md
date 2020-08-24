@@ -30,6 +30,15 @@ tags:
 1. Serial(串行：单线程) is between concurrency and parallelism.
 1.
 
+### C++ concurrency development
+1. C++11: Memory model, Threads, Mutexes and locks, Thread local data, Condition vaviables, Tasks
+1. C++14: Reader-writer locks
+1. C++17: Parallel STL
+1. C++20: std::jthread, Atomic smart pointers, Latches and barriers, Semaphores, Coroutines
+1. C++23: Executors, std::future, extensions, Transactional memory, Task blocks, Data-parallel vector, library
+
+
+
 ## OOP
 1. Object-Oriented Programming
 1. base class: defines the API
