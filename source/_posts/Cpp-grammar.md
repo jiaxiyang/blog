@@ -36,7 +36,7 @@ tags:
 1. C++17: Parallel STL
 1. C++20: std::jthread, Atomic smart pointers, Latches and barriers, Semaphores, Coroutines
 1. C++23: Executors, std::future, extensions, Transactional memory, Task blocks, Data-parallel vector, library
-
+1. 多线程要统计各个函数的运行时间，根据时间进行线程数比例划分，例如，预处理函数1s，处理函数2s，那么给预处理分配1个线程，处理分配两个线程，
 
 
 ## OOP
