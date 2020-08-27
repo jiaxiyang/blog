@@ -58,11 +58,16 @@ tags:
 #### 3.2.1 互斥量
 1. `std::mutex`创建互斥量，`lock`对互斥量上锁，unlock为解锁。
 1. RAII管理互斥量：C++标准库为互斥量提供了RAII模板类`std::lock_guard`，在构造时提供已锁的互斥量（lock_guard对象在构造时对传进来的mutex上锁），并在析构时解锁，从而保证互斥量被正确的解锁。
-1.  大多数情况下，互斥量通常会与需要保护的数据放在同一类中，而不是定义成全局变量。
+1. 大多数情况下，互斥量通常会与需要保护的数据放在同一类中，而不是定义成全局变量。
+1. C++17 提供`std::scoped_lock`加强版的`std::lock_guard`, 可以接受多个参数。
 
 #### 3.2.4 死锁
 1. 死锁一般解决方法：按顺序上锁。要么将两个都锁住，要么一个都不锁。
+1. `std::lock`能同时锁住多个互斥量。
 1. C++17中的`std::scoped_lock<>`是一种新的RAII模板类型。能接受不定数量的互斥量类型作为模板参数。在构造scoped_lock对象时对传入的mutex上锁，析构时解锁。
+1. `std::lock`锁上mutex之后不负责释放，还需要配合lock_guard或者手动释放mutex。`std::scoped_lock`生命周期结束后会自动释放锁。
+1. C++17特性：`自动推导模板参数`。可以简写为`std::scoped_lock lk(m1, m2);` 而不用写为`std::scoped_lock<std::mutex, std::mutex> lk(m1, m2);`
+
 
 
 ## 4. Synchronizing concurrent operations on atomic types
@@ -73,7 +78,7 @@ tags:
    - 通过标准库提供的工具。例如：`condition variable`
 
 ### 4.2 future
-1.
+1. async（sender)函数是一种promise,负责发送数据， future（receiver)负责接收数据。`future fut = async([]{return 3+4;}); cout << fut.get() << endl;`
 
 ## 5. The C++ memory model and operations on atomic types
 ### 5.1 内存模型
