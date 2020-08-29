@@ -42,7 +42,7 @@ tags:
 1. `Direct use` of machine and operating system resources
    - bitset and span(modern c++)
    - the onion principle: the more layers you peel off, the more control, the more error.
-1. Systematic and general `resource management`(RALL)
+1. Systematic and general `resource management`(RAII)
    - manage heap, file...
    - every resource must have an owner: responsible for its cleanup.
    - control the complete object life cycle: creation, copy, move, destruction

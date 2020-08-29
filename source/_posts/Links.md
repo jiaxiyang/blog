@@ -19,7 +19,7 @@ tags:
 ## C++
 1. [Cppreference](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
 1. [Bjarne Stroustrup](https://stroustrup.com/videos.html)
-1. [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines)
+1. [CppCoreGuidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#main)
 1. [CppCon](https://cppcon.org/)
 1. [Back to Basics](https://cppcon.org/b2b/)
 1. [Youtube CppCon video](https://www.youtube.com/user/CppCon/)
@@ -108,3 +108,7 @@ tags:
 1. Shell:    [shfmt](https://github.com/mvdan/sh) (install from github release)
 1. Cmake:    [cmake-format](https://github.com/cheshirekow/cmake_format)
 1. Markdown: [prettier](https://prettier.io/)
+
+## Code Analysis
+1. [Clang-tidy](http://clang.llvm.org/extra/clang-tidy/index.html)
+1.
