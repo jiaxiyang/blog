@@ -74,6 +74,7 @@ tags:
 
 ## Emacs
 1. [GNU Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
+1. [Awesome emacs](https://github.com/emacs-tw/awesome-emacs)
 1. [Tour Of Emacs](https://www.gnu.org/software/emacs/tour/index.html)
 1. [My Config](https://github.com/jiaxiyang/100ms_dot_emacs)
 1. [My Leader Key](https://github.com/jiaxiyang/leader-key-mode/blob/master/leader-key-mode.el)
