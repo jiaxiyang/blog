@@ -7,6 +7,12 @@ tags:
 - Links
 ---
 
+## AI
+1. [Netron](https://github.com/lutzroeder/Netron)
+
+## Data Structures and Algorithms
+1. [Boost Graph Library(BGL)](https://www.boost.org/doc/libs/1_74_0/libs/graph/doc/)
+
 ## Design Patterns
 1. [Refactoring Guru](https://refactoring.guru/)
 1. [Picture of Design Patterns](https://design-patterns.readthedocs.io/zh_CN/latest/index.html)
@@ -62,16 +68,6 @@ tags:
 1. [Concept video](https://www.youtube.com/watch?v=SZvs15hC81U)
 1. [Youtube Rust channel](https://www.youtube.com/channel/UCaYhcUwRBNscFNUKTjgPFiA)
 
-## Cheatsheet
-1. [Gdb](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
-2. [Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
-3. [Vim](https://linuxhandbook.com/vim-cheat-sheet/)
-4. [Bash](https://github.com/zhouyiqi91/awesome-cheatsheets/blob/master/languages/bash.sh)
-5. [Tmux](http://comtronic.com.au/blog/wp-content/uploads/comtronic_cheatsheet_tmux_A4.pdf)
-6. [Github Git](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
-7. [Matlab](http://sites.nd.edu/gfu/files/2019/07/cheatsheet.pdf)
-8. [Markdown](https://www.markdownguide.org/cheat-sheet/)
-
 ## Emacs
 1. [GNU Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
 1. [Awesome emacs](https://github.com/emacs-tw/awesome-emacs)
@@ -86,9 +82,15 @@ tags:
 1. [Melpa](http://melpa.org/)
 1. [Org Mode](https://orgmode.org/)
 
-## Emacs + Rust
-1. [Remacs](https://github.com/remacs/remacs)
-1. [Rust to expand Emacs](https://emacs-china.org/t/rust-emacs/12551)
+## Cheatsheet
+1. [Gdb](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
+2. [Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
+3. [Vim](https://linuxhandbook.com/vim-cheat-sheet/)
+4. [Bash](https://github.com/zhouyiqi91/awesome-cheatsheets/blob/master/languages/bash.sh)
+5. [Tmux](http://comtronic.com.au/blog/wp-content/uploads/comtronic_cheatsheet_tmux_A4.pdf)
+6. [Github Git](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
+7. [Matlab](http://sites.nd.edu/gfu/files/2019/07/cheatsheet.pdf)
+8. [Markdown](https://www.markdownguide.org/cheat-sheet/)
 
 ## Git
 1. [Git Book](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
