@@ -9,6 +9,12 @@ tags:
 ---
 
 ## The amazing features
+1. symbol-overlay
+1. awesome-tab
+1. anzu
+1. move-text
+1. goto-chg
+1. whole-line-or-region
 1. ace jump
 1. clang format
 1. compile and gdb
