@@ -11,6 +11,10 @@ tags:
 ## The amazing features
 1. symbol-overlay
 1. awesome-tab
+1. ace-window
+1. helpful
+1. imenu-list
+1. hydra
 1. anzu
 1. move-text
 1. goto-chg
