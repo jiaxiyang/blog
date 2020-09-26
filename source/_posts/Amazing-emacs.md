@@ -11,6 +11,13 @@ tags:
 ## The amazing features
 1. symbol-overlay
 1. awesome-tab
+1. beacon
+1. dimmer
+1. mood-line
+1. smex
+1. keypression
+1. rainbow-mode
+1. rainbow-delimiters
 1. ace-window
 1. helpful
 1. imenu-list
