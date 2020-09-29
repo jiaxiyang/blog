@@ -46,6 +46,23 @@ tags:
 1. [CS-Notes](https://github.com/CyC2018/CS-Notes)
 1. [Factory pattern](https://blog.csdn.net/qq_38238296/article/details/79841395?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param)
 
+## Emacs
+1. [GNU Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
+1. [Tour Of Emacs](https://www.gnu.org/software/emacs/tour/index.html)
+1. [Awesome emacs](https://github.com/emacs-tw/awesome-emacs)
+1. [Purcell config](https://github.com/purcell/emacs.d)
+1. [Xah Lee](http://ergoemacs.org/emacs/emacs.html)
+1. [Zamansky Config](https://github.com/zamansky/dot-emacs)
+1. [Zamansky Tutorial](https://cestlaz.github.io/stories/emacs/)
+1. [My Config](https://github.com/jiaxiyang/100ms_dot_emacs)
+1. [My Leader Key](https://github.com/jiaxiyang/leader-key-mode/blob/master/leader-key-mode.el)
+1. [Wcy Config](https://github.com/wcy123/100ms_dot_emacs)
+1. [Emacs China](https://emacs-china.org/)
+1. [Emacs Pinky](http://ergoemacs.org/emacs/emacs_pinky_2020.html)
+1. [Org Mode](https://orgmode.org/)
+1. [Org Guide](https://orgmode.org/orgguide.pdf)
+1. [Melpa](http://melpa.org/)
+
 ## Rust
 1. [Officail website](https://www.rust-lang.org/)
 1. [Official resource](https://www.rust-lang.org/learn)
@@ -67,22 +84,6 @@ tags:
 1. [Rust 张汉东](https://www.infoq.cn/article/Uugi_eIJusEka1aSPmQM)
 1. [Concept video](https://www.youtube.com/watch?v=SZvs15hC81U)
 1. [Youtube Rust channel](https://www.youtube.com/channel/UCaYhcUwRBNscFNUKTjgPFiA)
-
-## Emacs
-1. [GNU Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
-1. [Tour Of Emacs](https://www.gnu.org/software/emacs/tour/index.html)
-1. [Awesome emacs](https://github.com/emacs-tw/awesome-emacs)
-1. [Purcell config](https://github.com/purcell/emacs.d)
-1. [Xah Lee](http://ergoemacs.org/emacs/emacs.html)
-1. [Zamansky Config](https://github.com/zamansky/dot-emacs)
-1. [Zamansky Tutorial](https://cestlaz.github.io/stories/emacs/)
-1. [My Config](https://github.com/jiaxiyang/100ms_dot_emacs)
-1. [My Leader Key](https://github.com/jiaxiyang/leader-key-mode/blob/master/leader-key-mode.el)
-1. [Wcy Config](https://github.com/wcy123/100ms_dot_emacs)
-1. [Emacs China](https://emacs-china.org/)
-1. [Emacs Pinky](http://ergoemacs.org/emacs/emacs_pinky_2020.html)
-1. [Org Mode](https://orgmode.org/)
-1. [Melpa](http://melpa.org/)
 
 ## Cheatsheet
 1. [Gdb](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
