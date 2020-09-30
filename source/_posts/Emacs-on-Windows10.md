@@ -24,6 +24,7 @@ tags:
 1. [Tutorial](https://blog.csdn.net/u013938484/article/details/83539008)
 1. Note: Change package source. No vim at first, you can edit the file on windows
 1. Emacs install: `pacman -S mingw-w64-x86_64-emacs`
+1. Libs install: `pacman -S mingw-w64-x86_64-libpng && pacman -S mingw-w64-x86_64-libjpeg-turbo`
 1. Config .bashrc and .zshrc
 
 ## Build emacs plugins in Ubuntu on VMvare
