@@ -18,6 +18,7 @@ tags:
 1. Transparency: Medium
 1. Right mouse: paste
 1. Terminal Type: xterm-256color
+1. Cursor: bold, not blinking
 
 ## Install git vim oh-my-zsh emacs
 1. [Tutorial](https://blog.csdn.net/u013938484/article/details/83539008)
