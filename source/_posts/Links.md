@@ -89,6 +89,8 @@ tags:
 ## Cheatsheet
 1. [Gdb](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
 2. [Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
+1. [Org mode](https://www.gnu.org/software/emacs/refcards/pdf/orgcard.pdf)
+1. [Dired](https://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf)
 3. [Vim](https://linuxhandbook.com/vim-cheat-sheet/)
 4. [Bash](https://github.com/zhouyiqi91/awesome-cheatsheets/blob/master/languages/bash.sh)
 5. [Tmux](http://comtronic.com.au/blog/wp-content/uploads/comtronic_cheatsheet_tmux_A4.pdf)
