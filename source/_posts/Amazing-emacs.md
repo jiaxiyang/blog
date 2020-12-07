@@ -11,6 +11,7 @@ tags:
 ## The amazing features
 1. symbol-overlay
 1. awesome-tab
+1. eyebrowse
 1. beacon
 1. dimmer
 1. mood-line
@@ -53,3 +54,6 @@ tags:
 1. flycheck
 1. hungry delete
 1. ox-reveal
+1. crux
+1. leetcode
+1. pdf-tools

@@ -20,3 +20,9 @@ set -g prefix C-t
 unbind C-b
 bind C-t send-prefix
 ```
+
+## Reload config
+
+``` shell
+tmux source-file ~/.tmux.conf
+```
