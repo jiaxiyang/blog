@@ -33,7 +33,9 @@ set-window-option -g pane-base-index 1
 set -g renumber-windows on
 
 # right status: tmux show-options -g | grep status-right
-set -g status-right "#{?window_bigger,[#{window_offset_x}#,#{window_offset_y}] ,}\"#{=21:pane_title}\""
+# `man tmux` search "pane_title" or "host"
+# set -g status-right "#{=18:host} "
+set -g status-right "#{=18:host_short} "
 
 # reference C-t ?
 bind-key -T prefix a select-window -t :=1
