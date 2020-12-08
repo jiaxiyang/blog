@@ -25,7 +25,7 @@ bind C-t send-prefix
 
 # key bindings for horizontal and vertical panes
 bind | split-window -h
-bind \ split-window -h
+bind \\ split-window -h
 bind - split-window -v
 
 set -g base-index 1
