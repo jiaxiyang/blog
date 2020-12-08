@@ -15,6 +15,9 @@ tags:
 set -g mouse on        #For tmux version 2.1 and up
 # set -g mode-mouse on   #For tmux versions < 2.1
 
+# set history lenth
+set -g history-limit 15000
+
 # change prefix key
 set -g prefix C-t
 unbind C-b
