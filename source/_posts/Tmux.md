@@ -28,6 +28,10 @@ bind | split-window -h
 bind \ split-window -h
 bind - split-window -v
 
+set -g base-index 1
+set-window-option -g pane-base-index 1
+set -g renumber-windows on
+
 # reference C-t ?
 bind-key -T prefix a select-window -t :=1
 bind-key -T prefix s select-window -t :=2
