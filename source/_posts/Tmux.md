@@ -22,6 +22,21 @@ set -g history-limit 15000
 set -g prefix C-t
 unbind C-b
 bind C-t send-prefix
+
+# key bindings for horizontal and vertical panes
+bind | split-window -h
+bind \ split-window -h
+bind - split-window -v
+
+# reference C-t ?
+bind-key -T prefix a select-window -t :=1
+bind-key -T prefix s select-window -t :=2
+bind-key -T prefix d select-window -t :=3
+bind-key -T prefix f select-window -t :=4
+bind-key -T prefix g select-window -t :=5
+bind-key -T prefix h select-window -t :=6
+bind-key -T prefix j select-window -t :=7
+bind-key -T prefix k select-window -t :=8
 ```
 
 ## Reload config
