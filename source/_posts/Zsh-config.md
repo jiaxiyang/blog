@@ -8,6 +8,16 @@ tags:
 - Zsh
 ---
 
+## NOTE
+
+```
+# remember to put this code to .bashrc before execute zsh 
+# If not, scp can not work.
+[[ $- == *i* ]] || return
+zsh
+```
+
+
 ## oh my zsh
 
 ``` shell
