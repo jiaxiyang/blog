@@ -22,20 +22,28 @@ set -g history-limit 15000
 set -g prefix C-t
 unbind C-b
 bind C-t send-prefix
+# more intuitive keybindings for splitting and create window
+bind \\ split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
 
-# key bindings for horizontal and vertical panes
-bind | split-window -h
-bind \\ split-window -h
-bind - split-window -v
-
+# display
 set -g base-index 1
 set-window-option -g pane-base-index 1
 set -g renumber-windows on
 
+# set terminal title
+set -g set-titles on
+
+# redraw status line every 10 seconds
+set -g status-interval 10
+
 # right status: tmux show-options -g | grep status-right
-# `man tmux` search "pane_title" or "host"
-# set -g status-right "#{=18:host} "
-set -g status-right "#{=18:host_short} "
+set -g status-right "#{=21:host_short} "
+
+# Remove delay when sending commands
+# (default is 500 milliseconds)
+set -sg escape-time 1
 
 # reference C-t ?
 bind-key -T prefix a select-window -t :=1
