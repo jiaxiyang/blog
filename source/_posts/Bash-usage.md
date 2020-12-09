@@ -37,7 +37,7 @@ tags:
 1. !notice : use tldr to show the basic usage.
 
 ## Miscellaneous
-1. `ftp`: 搭建ftp服务器，脚本put上传文件，脚本get获取文件。服务器上可以放常用文件，也可以用来与windows交换数据。
+1. `ftp`: 搭建ftp服务器，脚本put:`scp -r $@ user@IP:path`上传文件，脚本get:`for i in $@; do scp -r user@IP:path/${i}; done`获取文件。服务器上可以放常用文件，也可以用来与windows交换数据。
 1. `cat url-list.txt | xargs wget -c`xargs将参数列表转换成小块分段传递给其他命令
 1. ssh scp 免密登录`ssh-keygen -t rsa && ssh-copy-id -i ~/.ssh/id_rsa.pub root@10.10.129.25`  或将一台机器的id_rsa.pub复制到另一台机器~/.ssh/authorized_keys文件中
 1. `tree -L 2`  查看二级目录结构
