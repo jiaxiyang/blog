@@ -66,10 +66,10 @@ tmux source-file ~/.tmux.conf
 [https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)
 
 ``` shell
-ta	  : tmux attach -t
-tad	  : tmux attach -d -t
-ts	  : tmux new-session -s
-tl	  : tmux list-sessions
+ta    : tmux attach -t
+tad   : tmux attach -d -t
+ts    : tmux new-session -s
+tl    : tmux list-sessions
 tksv  : tmux kill-server
 tkss  : tmux kill-session -t
 ```
