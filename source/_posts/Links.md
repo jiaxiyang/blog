@@ -97,6 +97,7 @@ tags:
 6. [Github Git](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 7. [Matlab](http://sites.nd.edu/gfu/files/2019/07/cheatsheet.pdf)
 8. [Markdown](https://www.markdownguide.org/cheat-sheet/)
+9. [Oh my zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)
 
 ## Git
 1. [Git Book](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)

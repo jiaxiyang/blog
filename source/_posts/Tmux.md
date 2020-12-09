@@ -61,3 +61,15 @@ bind-key -T prefix k select-window -t :=8
 ``` shell
 tmux source-file ~/.tmux.conf
 ```
+
+## Tmux Zsh CheatSheet
+[https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)
+
+``` shell
+ta	  : tmux attach -t
+tad	  : tmux attach -d -t
+ts	  : tmux new-session -s
+tl	  : tmux list-sessions
+tksv  : tmux kill-server
+tkss  : tmux kill-session -t
+```
