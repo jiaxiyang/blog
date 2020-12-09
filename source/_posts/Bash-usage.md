@@ -38,6 +38,13 @@ tags:
 
 ## Miscellaneous
 1. `ftp`: 搭建ftp服务器，脚本put:`scp -r $@ user@IP:path`上传文件，脚本get:`for i in $@; do scp -r user@IP:path/${i}; done`获取文件。服务器上可以放常用文件，也可以用来与windows交换数据。
+1. 打洞： A1, A2, A3..., B, C; A能连接B, B能连接C, A不能连接C。C上配置`~/.ssh/config`:
+
+```
+config
+```
+B上执行`ssh `登录到C，再打开一个C连接，就能和A之间使用scpc传数据。如果A连网，C如果想连网，B执行完ssh命令后，登录到C上，再执行`ssh  `后登录到A上，再打开一个C连接，就能上网了。
+
 1. `cat url-list.txt | xargs wget -c`xargs将参数列表转换成小块分段传递给其他命令
 1. ssh scp 免密登录`ssh-keygen -t rsa && ssh-copy-id -i ~/.ssh/id_rsa.pub root@10.10.129.25`  或将一台机器的id_rsa.pub复制到另一台机器~/.ssh/authorized_keys文件中
 1. `tree -L 2`  查看二级目录结构
