@@ -59,6 +59,7 @@ bind-key -T prefix g select-window -t :=5
 bind-key -T prefix h select-window -t :=6
 bind-key -T prefix j select-window -t :=7
 bind-key -T prefix k select-window -t :=8
+bind-key -T prefix \; select-window -t :=1 \; select-window -t -1
 ```
 
 ## Reload config
