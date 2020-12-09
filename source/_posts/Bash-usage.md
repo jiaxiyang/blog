@@ -37,7 +37,7 @@ tags:
 1. !notice : use tldr to show the basic usage.
 
 ## Miscellaneous
-1. `ftp`: 搭建ftp服务器，脚本put:`scp -r $@ user@IP:path`上传文件，脚本get:`for i in $@; do scp -r user@IP:path/${i}; done`获取文件。服务器上可以放常用文件，也可以用来与windows交换数据。
+1. `ftp`: 搭建ftp服务器，脚本put:`scp -r $@ user@IP:path`上传文件，脚本get:`for i in $@; do scp -r user@IP:path/${i}; done`获取文件。get-list-all:`ssh user@IP "cd path && ls -alhrt"`, get-list:`ssh user@IP "cd path && ls -lhrt | tail -n 10"`获取ftp服务器列表。ftp服务器上可以放常用文件，各服务器方便取。也可用于服务器(包括windows)间数据交换。
 1. 打洞： A1, A2, A3..., B, C; A能连接B, B能连接C, A不能连接C。C上配置`~/.ssh/config`:
 
 ```
