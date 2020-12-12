@@ -22,6 +22,8 @@ set -g history-limit 15000
 set -g prefix C-t
 unbind C-b
 bind C-t send-prefix
+set -g prefix2 C-j
+bind C-j send-prefix -2
 
 # more intuitive keybindings for splitting and create window
 bind \\ split-window -h -c "#{pane_current_path}"
