@@ -25,7 +25,7 @@ cd src
 
 ## cmd
 set foo bar
-get foo bar
+get foo
 
 ## change dump.rdb path
 config set dir /home/xxx
@@ -36,7 +36,7 @@ save
 
 ## hiredis (just a C client; not include server)
 
-``` shell
+``` shellp
 git clone https://github.com/redis/hiredis.git
 cd hiredis
 mkdir build; cd build; cmake ..; make;
