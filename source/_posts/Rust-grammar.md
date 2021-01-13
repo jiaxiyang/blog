@@ -37,6 +37,10 @@ tags:
 1. 用户会将重复代码泛化（抽象），编译器会将泛化代码具体化。
 1. trait类似其他语言中接口(interfaces)功能，虽然有些不同。
 1. 只有当trait或者要实现trait的类型位于crate的本地作用域时，才能为该类型实现trait。
+1. 在 release 构建中，Rust 不检测溢出，相反会进行一种被称为二进制补码包装（two’s complement wrapping）的操作。当在 debug 模式编译时，Rust 检查这类问题并使程序 panic
+1. Rust 的浮点数默认类型是 f64。数字类型默认是 i32。
+1. Rust 的 char 类型的大小为四个字节(four bytes)，并代表了一个 Unicode 标量值（Unicode Scalar Value），这意味着它可以比 ASCII 表示更多内容。在 Rust 中，拼音字母（Accented letters），中文、日文、韩文等字符，emoji（绘文字）以及零长度的空白字符都是有效的 char 值。
+1. Rust 有两个原生的复合类型：元组（tuple）和数组（array）。
 
 
 
