@@ -41,6 +41,7 @@ tags:
 1. Rust 的浮点数默认类型是 f64。数字类型默认是 i32。
 1. Rust 的 char 类型的大小为四个字节(four bytes)，并代表了一个 Unicode 标量值（Unicode Scalar Value），这意味着它可以比 ASCII 表示更多内容。在 Rust 中，拼音字母（Accented letters），中文、日文、韩文等字符，emoji（绘文字）以及零长度的空白字符都是有效的 char 值。
 1. Rust 有两个原生的复合类型：元组（tuple）和数组（array）。
+1. 
 
 
 
@@ -86,6 +87,36 @@ tags:
 1. Cargo 有一个机制来确保任何人在任何时候重新构建代码，都会产生相同的结果：Cargo 只会使用你指定的依赖版本，除非你又手动指定了别的。
 
 ## Ownership 所有权
+1. 当变量离开作用域，Rust 为我们调用一个特殊的函数drop。在 C++ 中，这种 item 在生命周期结束时释放资源的模式有时被称作 资源获取即初始化（Resource Acquisition Is Initialization (RAII)）。
+1. `move:` `let s1 = String::from("hello"); let s2 = s1;`  这个操作被称为移动（move），而不是浅拷贝。Rust 则认为 s1 不再有效，因此 Rust 不需要在 s1 离开作用域后清理任何东西。
+1. Rust 永远也不会自动创建数据的 “深拷贝”。因此，任何 自动 的复制可以被认为对运行时性能影响较小。
+1. `clone:` 当出现 clone 调用时，你知道一些特定的代码被执行而且这些代码可能相当消耗资源
+1. `copy:` `let x = 5; let y = x;` x在栈上，copy操作。Rust 有一个叫做 Copy trait 的特殊注解，可以用在类似整型这样的存储在栈上的类型上。如果一个类型拥有 Copy trait，一个旧的变量在将其赋值给其他变量后仍然可用。
+1. Rust 不允许自身或其任何部分实现了 Drop trait 的类型使用 Copy trait。
+1. 任何简单标量值的组合可以是 Copy 的，不需要分配内存或某种形式资源的类型是 Copy 的。
+
+``` rust
+fn main() {
+    let s = String::from("hello");  // s 进入作用域
+
+    takes_ownership(s);             // s 的值移动到函数里 ...
+                                    // ... 所以到这里不再有效
+
+    let x = 5;                      // x 进入作用域
+
+    makes_copy(x);                  // x 应该移动函数里，
+                                    // 但 i32 是 Copy 的，所以在后面可继续使用 x
+} // 这里, x 先移出了作用域，然后是 s。但因为 s 的值已被移走，
+  // 所以不会有特殊操作
+  
+fn takes_ownership(some_string: String) { // some_string 进入作用域
+    println!("{}", some_string);
+} // 这里，some_string 移出作用域并调用 `drop` 方法。占用的内存被释放
+
+fn makes_copy(some_integer: i32) { // some_integer 进入作用域
+    println!("{}", some_integer);
+} // 这里，some_integer 移出作用域。不会有特殊操作
+```
 
 ## Error Handling 错误处理
 1. Rust将错误组合成两个主要类别，可恢复错误和不可恢复错误。
@@ -198,6 +229,9 @@ assert_eq!(v2, vec![2, 3, 4]);
    - 当有大量数据并希望在确保数据不被拷贝的情况下转移所有权的时候。
    - 当希望拥有一个值并只关心它的类型是否实现了特定trait而不是具体类型的时候
 1. `Box<T>`类型是一个只能智能指针，因为它实现了`Deref`trait，它允许`Box<T>`的值被当做引用对待。
+1. 变量的所有权总是遵循相同的模式：将值赋给另一个变量时移动它。当持有堆中数据值的变量离开作用域时，其值将通过 drop 被清理掉，除非数据被移动为另一个变量所有。
+1. & 符号就是 引用，允许你使用值但不获取其所有权。
+1. 我们将获取引用作为函数参数称为 借用（borrowing）。
 
 
 ## Concurrency 并发
