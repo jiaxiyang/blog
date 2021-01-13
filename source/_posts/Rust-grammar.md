@@ -79,6 +79,7 @@ tags:
 1. 工作空间在顶级目录有一个`target`目录，`member`并没有自己的target目录。通过共享的target目录，工作空间可以避免其他crate多余的重复构建。
 1. cargo不假定工作空间中的crates包会相互依赖，所以需要明确表明工作空间中crate包的依赖关系。一个包用到了其他包，需要在该包的Cargo.toml文件`[dependencies]`域中加入依赖
 1. 工作空间只在根目录有一个Cargo.lock，而不是在每一个crate（就当是packge)目录都有Cargo.lock。这确保了所有的crate都使用完全相同版本的依赖。也节省了空间，避免多个拷贝。
+1. Cargo 有一个机制来确保任何人在任何时候重新构建代码，都会产生相同的结果：Cargo 只会使用你指定的依赖版本，除非你又手动指定了别的。
 
 ## Ownership 所有权
 
@@ -113,6 +114,7 @@ fn main() {
 1. `unwrap`函数作用于Result，如果Result的值是成员OK，unwrap会返回Ok中的值，如果是成员Err，unwrap会为我们调用`panic!`
 1. `expect`与`unwrap`使用方式一样，`expect`用来调用`panic!`的错误信息将会作为参数传递给`expect`，而不像`unwrap`那样使用默认的`panic!`信息。`expect`更容易查找错误信息位置。
 1. `?`运算符放在Result之后的含义：如果Result的值是Ok，这个表达式将会返回Ok中的值而程序继续执行，如果是Err，Err中的值将作为整个函数的返回值，就好像使用了return关键字一样，这样错误值就被传递给调用者。
+1. 每一个Result都需要被处理，否则会出现警告。
 
 
 ## Traits
