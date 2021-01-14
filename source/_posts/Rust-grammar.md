@@ -41,8 +41,25 @@ tags:
 1. Rust 的浮点数默认类型是 f64。数字类型默认是 i32。
 1. Rust 的 char 类型的大小为四个字节(four bytes)，并代表了一个 Unicode 标量值（Unicode Scalar Value），这意味着它可以比 ASCII 表示更多内容。在 Rust 中，拼音字母（Accented letters），中文、日文、韩文等字符，emoji（绘文字）以及零长度的空白字符都是有效的 char 值。
 1. Rust 有两个原生的复合类型：元组（tuple）和数组（array）。
-1. 
+1. `tuple:` `let tup: (i32, f64, u8) = (500, 6.4, 1); let (x, y, z) = tup; //结构  let five_hundred = tup.0;`
+1. `struct:`
 
+``` rust
+struct User {
+    username: String,
+    email: String,
+}
+
+let mut user1 = User {
+    email: String::from("someone@example.com"), //实例中字段的顺序不需要和它们在结构体中声明的顺序一致
+    username: String::from("someusername123"),
+};
+
+user1.email = String::from("anotheremail@example.com");
+```
+
+1. 我们也可以定义一个没有任何字段的结构体！它们被称为 类单元结构体（unit-like structs）因为它们类似于 ()，即 unit 类型。类单元结构体常常在你想要在某个类型上实现 trait 但不需要在类型中存储数据的时候发挥作用。
+1. 
 
 
 ## Project Manage
