@@ -59,8 +59,23 @@ user1.email = String::from("anotheremail@example.com");
 ```
 
 1. 我们也可以定义一个没有任何字段的结构体！它们被称为 类单元结构体（unit-like structs）因为它们类似于 ()，即 unit 类型。类单元结构体常常在你想要在某个类型上实现 trait 但不需要在类型中存储数据的时候发挥作用。
-1. 
+1. 方法与函数类似：它们使用 fn 关键字和名称声明，可以拥有参数和返回值，同时包含在某处调用该方法时会执行的代码。不过方法与函数是不同的，因为它们在结构体的上下文中被定义
 
+``` rust
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+```
+
+1. impl 块的另一个有用的功能是：允许在 impl 块中定义 不 以 `self` 作为参数的函数。这被称为 `关联函数（associated functions）`，因为它们与结构体相关联。它们仍是函数而不是方法，因为它们并不作用于一个结构体的实例。你已经使用过 String::from 关联函数了。使用结构体名和 `::` 语法来调用关联函数。
 
 ## Project Manage
 1. 包`packages`: Cargo的一个功能，允许你构建、测试和分享crate
