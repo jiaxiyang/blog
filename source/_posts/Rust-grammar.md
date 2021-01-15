@@ -158,6 +158,114 @@ fn makes_copy(some_integer: i32) { // some_integer 进入作用域
 1. 在任意给定时间，要么 只能有一个可变引用，要么 只能有多个不可变引用。
 
 
+## Enums 枚举 and 模式匹配
+1. 枚举允许你通过列举可能的 成员（variants） 来定义一个类型
+1. 用枚举替代结构体还有另一个优势：每个成员可以处理不同类型和数量的数据。
+
+``` rust
+enum IpAddr {
+    V4(u8, u8, u8, u8),
+    V6(String),
+}
+
+let home = IpAddr::V4(127, 0, 0, 1);
+
+let loopback = IpAddr::V6(String::from("::1"));
+```
+
+1. 结构体和枚举还有另一个相似点：就像可以使用 impl 来为结构体定义方法那样，也可以在枚举上定义方法
+1. `Option` 类型应用广泛因为它编码了一个非常普遍的场景，即一个值要么有值要么没值。
+1. Rust 并没有空值，不过它确实拥有一个可以编码存在或不存在概念的枚举。这个枚举是 Option<T>，而且它定义于标准库中，如下:
+  
+``` rust
+enum Option<T> {
+    Some(T),
+    None,
+}
+```
+
+1. Option<T> 枚举是如此有用以至于它甚至被包含在了 prelude 之中，你不需要将其显式引入作用域。另外，它的成员也是如此，可以不需要 Option:: 前缀来直接使用 Some 和 None。即便如此 Option<T> 也仍是常规的枚举，Some(T) 和 None 仍是 Option<T> 的成员。
+1. 只要一个值不是 Option<T> 类型，你就可以安全的认定它的值不为空。
+1. Rust 有一个叫做 match 的极为强大的控制流运算符，它允许我们将一个值与一系列的模式相比较，并根据相匹配的模式执行相应代码。模式可由字面值、变量、通配符和许多其他内容构成
+
+``` rust
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
+```
+
+1. 对于if, 表达式必须返回一个布尔值，而match可以是任何类型的。
+1. 一个分支有两个部分：一个模式和一些代码。第一个分支的模式是值 Coin::Penny 而之后的 => 运算符将模式和将要运行的代码分开。这里的代码就仅仅是值 1。每一个分支之间使用逗号`,`分隔。
+1. 如果想要在分支中运行多行代码，可以使用大括号`{}`。
+1. 匹配Option<T>:
+
+``` rust
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
+
+let five = Some(5);
+let six = plus_one(five);
+let none = plus_one(None);
+```
+
+1. Rust 中的匹配是 穷尽的（exhaustive）：必须穷举到最后的可能性来使代码有效。
+1. `_`通配符：
+
+``` rust
+let some_u8_value = 0u8;
+match some_u8_value {
+    1 => println!("one"),
+    3 => println!("three"),
+    5 => println!("five"),
+    7 => println!("seven"),
+    _ => (),
+}
+```
+
+1. if let 语法让我们以一种不那么冗长的方式结合 if 和 let，来处理只匹配一个模式的值而忽略其他模式的情况。
+
+``` rust
+
+let some_u8_value = Some(0u8);
+match some_u8_value {
+    Some(3) => println!("three"),
+    _ => (),
+}
+
+if let Some(3) = some_u8_value {
+    println!("three");
+}
+```
+
+1. 使用 if let 意味着编写更少代码，更少的缩进和更少的样板代码。然而，这样会失去 match 强制要求的穷尽性检查。match 和 if let 之间的选择依赖特定的环境以及增加简洁度和失去穷尽性检查的权衡取舍。
+1. 可以在 if let 中包含一个 else。else 块中的代码与 match 表达式中的 _ 分支块中的代码相同
+
+``` rust
+let mut count = 0;
+if let Coin::Quarter(state) = coin {
+    println!("State quarter from {:?}!", state);
+} else {
+    count += 1;
+}
+```
+1. 如果你的程序遇到一个使用 match 表达起来过于啰嗦的逻辑，记住 if let 也在你的 Rust 工具箱中。
+
 ## Error Handling 错误处理
 1. Rust将错误组合成两个主要类别，可恢复错误和不可恢复错误。
 1. 可恢复错误通常代表向用户报告错误和重试操作是合理的情况，比如未找到文件。
