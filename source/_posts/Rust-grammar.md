@@ -266,6 +266,36 @@ if let Coin::Quarter(state) = coin {
 ```
 1. 如果你的程序遇到一个使用 match 表达起来过于啰嗦的逻辑，记住 if let 也在你的 Rust 工具箱中。
 
+## 常见集合 collections
+1. 不同于内建的数组和元组类型，这些集合指向的数据是储存在堆上的，这意味着数据的数量不必在编译时就已知，并且还可以随着程序的运行增长或缩小。
+1. vector 允许我们在一个单独的数据结构中储存多于一个的值，它在内存中彼此相邻地排列所有的值。vector 只能储存相同类型的值。
+1. `let v: Vec<i32> = Vec::new();` 创建空的vector
+1. 为了方便 Rust 提供了 vec! 宏。这个宏会根据我们提供的值来创建一个新的 Vec。`let v = vec![1, 2, 3];`
+1. 对于新建一个 vector 并向其增加元素，可以使用 push 方法
+
+``` rust
+let mut v = Vec::new();
+
+v.push(5);
+v.push(6);
+```
+
+1. 访问 vector 中一个值的两种方式，索引语法或者 get 方法：
+
+``` rust
+let v = vec![1, 2, 3, 4, 5];
+
+let third: &i32 = &v[2];
+println!("The third element is {}", third);
+
+match v.get(2) {
+    Some(third) => println!("The third element is {}", third),
+    None => println!("There is no third element."),
+}
+```
+
+1. 使用 & 和 [] 返回一个引用；或者使用 get 方法以索引作为参数来返回一个 Option<&T>。
+
 ## Error Handling 错误处理
 1. Rust将错误组合成两个主要类别，可恢复错误和不可恢复错误。
 1. 可恢复错误通常代表向用户报告错误和重试操作是合理的情况，比如未找到文件。
