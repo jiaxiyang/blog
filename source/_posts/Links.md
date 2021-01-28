@@ -46,6 +46,14 @@ tags:
 1. [CS-Notes](https://github.com/CyC2018/CS-Notes)
 1. [Factory pattern](https://blog.csdn.net/qq_38238296/article/details/79841395?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param)
 
+## Cmake
+1. [Cmake Tutorial](https://cmake.org/cmake/help/v3.19/guide/tutorial/)
+1. [Cmake Buildsystem](https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html)
+1. [Deniz Bahadir 2019](https://www.youtube.com/watch?v=y9kSr5enrSk)
+1. [Deniz Bahadir 2018 traditional and modern camke](https://www.youtube.com/watch?v=y7ndUhdQuU8)
+1. [OO Cmake](https://zhuanlan.zhihu.com/p/76975231)
+1. [Cmake Concept](https://ukabuer.me/blog/more-modern-cmake)
+
 ## Emacs
 1. [GNU Emacs](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
 1. [Melpa](http://melpa.org/)
