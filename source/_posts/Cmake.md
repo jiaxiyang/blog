@@ -57,6 +57,33 @@ target_compile_definition(MyEXE PRIVATE std_cxx_14) ## std_cxx_14为编译属性
 1. `INTERFACE`：表示Target的属性不适用于其自身，而只适用于依赖其的Target。
 1. `PUBLIC`：表示Target的属性既是build-requirements也是usage-requirements。凡是依赖。凡是依赖于当前Target的Target都会共享本属性。
 
+## 3.13之默认生成绝对路径
+1. 3.13之前
+
+```
+add_library( MyTarget SHARED )
+target_sources ( MyTarget
+    PRIVATE    src/A.cpp
+               src/B.cpp
+               headers/B.hpp
+    PUBLIC     ${CMAKE_CURRENT_SOURCE_DIR}/headers/A.hpp
+    INTERFACE  ${CMAKE_CURRENT_SOURCE_DIR}/headers/C.hpp
+)
+```
+
+1. 3.13之后生成绝对路径
+```
+add_library( MyTarget SHARED )
+target_sources ( MyTarget
+    PRIVATE    src/A.cpp
+               src/B.cpp
+               headers/B.hpp
+    PUBLIC     headers/A.hpp
+    INTERFACE  headers/C.hpp
+)
+```
+
+
 ## Links
 1. [Cmake Tutorial](https://cmake.org/cmake/help/v3.19/guide/tutorial/)
 1. [Cmake Buildsystem](https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html)
