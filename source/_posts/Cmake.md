@@ -1,0 +1,67 @@
+---
+title: Modern Cmake
+date: 2021-01-028 08:56:09
+categories:
+- Tools
+- Cmake
+tags:
+- Cmake
+---
+
+## Modern Cmake Using Steps
+1. Always create targets with no sources first.
+1. Use `target...` commands to add build-/usage-requirements
+1. Use `IMPORTED` targets for external libraires. But, prefer `find_package` or `EXPORTED` targets ro creating them yourself.
+
+## Target and Property
+1. 现代化的CMake是围绕 Target 和 Property 来定义的，并且竭力避免出现变量variable的定义。Variable横行是典型CMake2.8时期的风格。现代版的CMake更像是在遵循OOP的规则，通过target来约束link、compile等相关属性的作用域。
+
+### Target
+1. 如果把一个Target想象成一个对象（Object），会发现两者的组织方式非常相似：
+
+```
+构造函数：
+add_executable
+add_library
+成员函数：
+get_target_property()
+set_target_properties()
+get_property(TARGET)
+set_property(TARGET)
+target_compile_definitions()
+target_compile_features()
+target_compile_options()
+target_include_directories()
+target_link_libraries()
+target_sources()
+成员变量
+Target properties（太多）
+```
+
+### Properties
+1. target_xxx命令PRIVATE/PUBLIC...后为property，例如
+
+```
+target_source(MyEXE PRIVATE "main.cpp")  ## main.cpp为source属性
+target_link_library(MyEXE PRIVATE Poco::Net Poco::Util) ## Poco:Net Poco::Util为link属性
+target_compile_definition(MyEXE PRIVATE std_cxx_14) ## std_cxx_14为编译属性
+```
+
+## Build-Requirements and Usage-Requirements
+1. `Build-Requirements`： 包含了所有构建Target必须的材料。如源代码，include路径，预编译命令，链接依赖，编译/链接选项，编译/链接特性等。
+1. `Usage-Requirements`：包含了所有使用Target必须的材料。如源代码，include路径，预编译命令，链接依赖，编译/链接选项，编译/链接特性等。这些往往是当另一个Target需要使用当前target时，必须包含的依赖
+
+## PRIVATE/INTERFACE/PUBLIC
+1. 定义了`Target属性`的传递范围。
+1. `PRIVATE`: 表示Target的属性只定义在当前Target中，任何依赖当前Target的Target不共享PRIVATE关键字下定义的属性。
+1. `INTERFACE`：表示Target的属性不适用于其自身，而只适用于依赖其的Target。
+1. `PUBLIC`：表示Target的属性既是build-requirements也是usage-requirements。凡是依赖。凡是依赖于当前Target的Target都会共享本属性。
+
+## Links
+1. [Cmake Tutorial](https://cmake.org/cmake/help/v3.19/guide/tutorial/)
+1. [Cmake Buildsystem](https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html)
+1. [Deniz Bahadir 2019](https://www.youtube.com/watch?v=y9kSr5enrSk)
+1. [Deniz Bahadir 2018 traditional and modern camke](https://www.youtube.com/watch?v=y7ndUhdQuU8)
+1. [Beniz Bahadir PPT](https://github.com/Bagira80/More-Modern-CMake)
+1. [OO Cmake](https://zhuanlan.zhihu.com/p/76975231)
+1. [Cmake Concept](https://ukabuer.me/blog/more-modern-cmake)

@@ -51,6 +51,7 @@ tags:
 1. [Cmake Buildsystem](https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html)
 1. [Deniz Bahadir 2019](https://www.youtube.com/watch?v=y9kSr5enrSk)
 1. [Deniz Bahadir 2018 traditional and modern camke](https://www.youtube.com/watch?v=y7ndUhdQuU8)
+1. [Beniz Bahadir PPT](https://github.com/Bagira80/More-Modern-CMake)
 1. [OO Cmake](https://zhuanlan.zhihu.com/p/76975231)
 1. [Cmake Concept](https://ukabuer.me/blog/more-modern-cmake)
 
