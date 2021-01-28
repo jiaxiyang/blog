@@ -60,6 +60,7 @@ target_compile_definition(MyEXE PRIVATE std_cxx_14) ## std_cxx_14为编译属性
 ## Links
 1. [Cmake Tutorial](https://cmake.org/cmake/help/v3.19/guide/tutorial/)
 1. [Cmake Buildsystem](https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html)
+1. [Effective Modern Cmake](https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1)
 1. [Deniz Bahadir 2019](https://www.youtube.com/watch?v=y9kSr5enrSk)
 1. [Deniz Bahadir 2018 traditional and modern camke](https://www.youtube.com/watch?v=y7ndUhdQuU8)
 1. [Beniz Bahadir PPT](https://github.com/Bagira80/More-Modern-CMake)
