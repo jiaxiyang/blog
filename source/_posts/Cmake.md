@@ -8,11 +8,6 @@ tags:
 - Cmake
 ---
 
-## Modern Cmake Using Steps
-1. Always create targets with no sources first.
-1. Use `target...` commands to add build-/usage-requirements
-1. Use `IMPORTED` targets for external libraires. But, prefer `find_package` or `EXPORTED` targets ro creating them yourself.
-
 ## Target and Property
 1. 现代化的CMake是围绕 Target 和 Property 来定义的，并且竭力避免出现变量variable的定义。Variable横行是典型CMake2.8时期的风格。现代版的CMake更像是在遵循OOP的规则，通过target来约束link、compile等相关属性的作用域。
 
@@ -56,6 +51,11 @@ target_compile_definition(MyEXE PRIVATE std_cxx_14) ## std_cxx_14为编译属性
 1. `PRIVATE`: 表示Target的属性只定义在当前Target中，任何依赖当前Target的Target不共享PRIVATE关键字下定义的属性。
 1. `INTERFACE`：表示Target的属性不适用于其自身，而只适用于依赖其的Target。
 1. `PUBLIC`：表示Target的属性既是build-requirements也是usage-requirements。凡是依赖。凡是依赖于当前Target的Target都会共享本属性。
+
+## Modern Cmake Using Steps
+1. Always create targets with no sources first.
+1. Use `target...` commands to add build-/usage-requirements
+1. Use `IMPORTED` targets for external libraires. But, prefer `find_package` or `EXPORTED` targets ro creating them yourself.
 
 ## 3.13之默认生成绝对路径
 1. 3.13之前
