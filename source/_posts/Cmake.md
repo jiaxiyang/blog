@@ -72,6 +72,7 @@ target_sources ( MyTarget
 ```
 
 1. 3.13之后生成绝对路径
+
 ```
 add_library( MyTarget SHARED )
 target_sources ( MyTarget
@@ -81,6 +82,32 @@ target_sources ( MyTarget
     PUBLIC     headers/A.hpp
     INTERFACE  headers/C.hpp
 )
+```
+
+## CMakeLists.txt
+1. top level CMakeLists.txt begining:
+
+```
+cmake_minimum_required( VERSION 3.15...3.17 )
+
+set( CMAKE_PROJECT_INCLUDE_BEFORE
+     "${CMAKE_CURRENT_LIST_DIR}/common-project-info.in" )
+# include( "${CMAKE_CURRENT_LIST_DIR}/common-project-include.in" )
+
+project (MyRootProject
+    VERSION ${project_version}
+    DESCRIPTION ${project_description}
+    HOMEPAGE_URL ${project_homepage}
+    LANGUAGES C CXX )
+
+```
+
+```
+# common-project-info.in
+
+set ( project_version 1.2.3 )
+set ( project_description "test...." )
+set ( project_homepage "https://www...." )
 ```
 
 
