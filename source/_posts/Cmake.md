@@ -8,6 +8,9 @@ tags:
 - Cmake
 ---
 
+## Concepts
+1. CMake is not a build system. It's the build system generator.
+
 ## Target and Property
 1. 现代化的CMake是围绕 Target 和 Property 来定义的，并且竭力避免出现变量variable的定义。Variable横行是典型CMake2.8时期的风格。现代版的CMake更像是在遵循OOP的规则，通过target来约束link、compile等相关属性的作用域。
 
@@ -115,6 +118,7 @@ set ( project_homepage "https://www...." )
 1. [Cmake Tutorial](https://cmake.org/cmake/help/v3.19/guide/tutorial/)
 1. [Cmake Buildsystem](https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html)
 1. [Effective Modern Cmake](https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1)
+1. [Effective Modern Cmake video](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
 1. [Deniz Bahadir 2019](https://www.youtube.com/watch?v=y9kSr5enrSk)
 1. [Deniz Bahadir 2018 traditional and modern camke](https://www.youtube.com/watch?v=y7ndUhdQuU8)
 1. [Beniz Bahadir PPT](https://github.com/Bagira80/More-Modern-CMake)
