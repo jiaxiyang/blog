@@ -8,6 +8,7 @@ tags:
 ---
 
 ## Programming experience
+1. `可重复`和`自动化`非常重要的思维工作方式。Jenkins, docker, CI, Rust Cargo.lock文件, emacs tmux插件。代码风格fmt是自动化也是风格可重复。
 1. 最重要的是`官方资源`，看英文原文，如rust官网教程，c++ cppcon会议。
 1. 找`最专业`的，从原理上学习。如rust设计者讲rust，git原理。
 1. 找`创始人相关`视频学习，如Bjarne Stroustrup c++视频，Linus Torvalds git原理。Richard Stallman emacs.
@@ -73,6 +74,7 @@ tags:
 1. 使用cppinsights从编译器的角度看程序。有助于对语法的了解。
 
 ## Productivity
+1. 搭建ftp服务器，使用`put`上传，`get`下载，`gls`查看列表。多个服务器之间共享传递文件，windows上浏览器也可访问。见Bash-usage.md
 1. 用好tmux, fd, rg, zh, fzf
 1. 使用格式化工具刷代码，不要手动刷
 1. 开始时多使用cheatsheet
