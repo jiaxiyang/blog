@@ -8,7 +8,7 @@ tags:
 ---
 
 ## Programming experience
-1. `可重复`和`自动化`非常重要的思维工作方式。Jenkins, docker, CI, Rust Cargo.lock文件, emacs tmux插件。代码风格fmt是自动化也是风格可重复。
+1. `可重复`和`自动化`是非常重要的思维工作方式。版本管理git, Jenkins, docker, CI, Rust Cargo.lock文件, emacs tmux插件, 软件一条命令安装(自动化，可重复), 代码风格fmt是自动化也是风格可重复，work log(可重复）。
 1. 最重要的是`官方资源`，看英文原文，如rust官网教程，c++ cppcon会议。
 1. 找`最专业`的，从原理上学习。如rust设计者讲rust，git原理。
 1. 找`创始人相关`视频学习，如Bjarne Stroustrup c++视频，Linus Torvalds git原理。Richard Stallman emacs.
