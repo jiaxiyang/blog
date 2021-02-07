@@ -21,6 +21,7 @@ tags:
 ## Concurrent Programming
 1. [C++ Concurrency in action 2](https://b-ok.lat/book/3688262/d57395?dsource=recommend&regionChanged=&redirect=4729105)
 1. [C++ Concurrency in action Chinese](https://github.com/xiaoweiChen/CPP-Concurrency-In-Action-2ed-2019)
+1. [Back to basics locks and tasks](https://github.com/CppCon/CppCon2019/blob/master/Presentations/back_to_basics_atomics_locks_and_tasks/back_to_basics_atomics_locks_and_tasks__rainer_grimm__cppcon_2019.pdf)
 1. [taskflow](https://github.com/taskflow/taskflow)
 1. [thrust](https://github.com/thrust/thrust)
 
