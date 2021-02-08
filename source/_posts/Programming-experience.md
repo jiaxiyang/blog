@@ -7,8 +7,12 @@ tags:
 - Program
 ---
 
-## Programming experience
+## 思维模式
 1. `可重复`和`自动化`是非常重要的思维工作方式。版本管理git, Jenkins, docker, CI, Rust Cargo.lock文件, emacs tmux插件, 软件一条命令安装(自动化，可重复), 代码风格fmt是自动化也是风格可重复，work log(可重复）。
+1. `effect`和`side effect副作用`。`纯函数`的行为只依赖它的接口。非纯函数副作用：引起环境，上下文的改变。[side effect](https://wangji.pro/%E6%9C%89%E5%85%B3%E6%B3%9B%E5%87%BD%E7%BC%96%E7%A8%8B%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86-effect-%E5%92%8C-side-effect/) 指的是那些任何主动或被动地对“非当前局部环境变量”的访问的操作。注意，“非当前局部环境变量”不仅仅包括访问全局变量和静态变量。这个操作可能非常广泛，甚至不局限于变量，还包括访问外部 IO，执行某些特殊指令，以非正常返回的方式引起的主动或被动出栈（比如异常）等行为。
+1. 多用纯函数，非纯函数会增加系统状态，使系统复杂化，容易出问题。
+
+## Programming experience
 1. 最重要的是`官方资源`，看英文原文，如rust官网教程，c++ cppcon会议。
 1. 找`最专业`的，从原理上学习。如rust设计者讲rust，git原理。
 1. 找`创始人相关`视频学习，如Bjarne Stroustrup c++视频，Linus Torvalds git原理。Richard Stallman emacs.
