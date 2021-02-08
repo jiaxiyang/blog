@@ -49,3 +49,4 @@ sudo make install
 ## redis lock using hiredis
 [redislock C++ sample](https://github.com/yuhanfang/redislock)
 [Redis set command(note: NX)](https://redis.io/commands/set)
+[redis实现分布式锁](https://blog.csdn.net/xlgen157387/article/details/79036337)
