@@ -17,6 +17,9 @@ tags:
 1. 获取锁的时候还设置一个获取的超时时间，若超过这个时间则放弃获取锁。
 1. 释放锁的时候，通过UUID判断是不是该锁，若是该锁，则执行delete进行锁释放。
 
+### 超时后又多个程序获得锁解决方法
+1. 将过期时间设置足够长，确保代码逻辑在锁释放之前能够执行完成
+1. `为获取锁的线程增加守护线程，为将要过期但未释放的锁增加有效时间`
 
 
 ## Redis server
@@ -58,6 +61,7 @@ sudo make install
 
 ## redis lock using hiredis
 1. [redis实现分布式锁](https://blog.csdn.net/xlgen157387/article/details/79036337)
+1. [小米解决方案](https://xiaomi-info.github.io/2019/12/17/redis-distributed-lock/)
 1. [redis分布式锁](https://juejin.cn/post/6844903830442737671)
 1. [redislock C++ sample](https://github.com/yuhanfang/redislock)
 1. [Redis set command(note: NX)](https://redis.io/commands/set)
