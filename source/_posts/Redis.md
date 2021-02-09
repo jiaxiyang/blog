@@ -71,8 +71,9 @@ sudo make install
 ## NOTE: sample are easier than hiredis-test
 ```
 
-## redis lock using hiredis
+## Links
 1. [redis lock华为漫画](https://bbs.huaweicloud.com/blogs/209955)
+1. [Zookeeper 华为漫画](https://bbs.huaweicloud.com/blogs/209954)
 1. [redis实现分布式锁](https://blog.csdn.net/xlgen157387/article/details/79036337)
 1. [小米解决方案](https://xiaomi-info.github.io/2019/12/17/redis-distributed-lock/)
 1. [redis分布式锁](https://juejin.cn/post/6844903830442737671)
