@@ -28,6 +28,11 @@ tags:
 1. 将过期时间设置足够长，确保代码逻辑在锁释放之前能够执行完成
 1. `为获取锁的线程增加守护线程，为将要过期但未释放的锁增加有效时间`
 
+### [使用守护线程特点](https://segmentfault.com/a/1190000022935064)
+1. `一定要用SET key value NX PX milliseconds 命令`:如果不用，先设置了值，再设置过期时间，这个不是原子性操作，有可能在设置过期时间之前宕机，会造成死锁(key永久存在)
+1. `value要具有唯一性`:这个是为了在解锁的时候，需要验证value是和加锁的一致才删除key。这是避免了一种情况：假设A获取了锁，过期时间30s，此时35s之后，锁已经自动释放了，A去释放锁，但是此时可能B获取了锁。A客户端就不能删除B的锁了。
+
+
 
 ## Redis server
 
@@ -72,3 +77,4 @@ sudo make install
 1. [redis分布式锁](https://juejin.cn/post/6844903830442737671)
 1. [redislock C++ sample](https://github.com/yuhanfang/redislock)
 1. [Redis set command(note: NX)](https://redis.io/commands/set)
+1. [Redisson](https://github.com/redisson/redisson)
