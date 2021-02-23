@@ -119,6 +119,17 @@ set ( project_homepage "https://www...." )
     - `Config模式`：搜索XXX_DIR指定路径下的XXXConfig.cmake文件，执行该文件从而找到XXX库。其中具体查找库并给XXX_INCLUDE_DIRS和XXX_LIBRARIES两个变量赋值的操作由XXXConfig.cmake模块完成。
 1. 两种模式看起来似乎差不多，不过cmake默认采取Module模式，如果Module模式未找到库，才会采取Config模式。如果XXX_DIR路径下找不到XXXConfig.cmake文件，则会找/usr/local/lib/cmake/XXX/中的XXXConfig.cmake文件。总之，Config模式是一个备选策略。通常，库安装时会拷贝一份XXXConfig.cmake到系统目录中，因此在没有显式指定搜索路径时也可以顺利找到。
 
+## pkg-config
+1. 如果find_package找不到库，如果系统中有库的.pc配置文件，可以使用pkg-config替代。
+
+``` cmake
+find_package(glog QUIET)
+if (NOT glog_FOUND)
+    find_package(PkgConfig)
+    pkg_search_module(PKG_GLOG REQUIRED IMPORTED_TARGET GLOBAL libglog)
+    add_library(glog::glog ALIAS PkgConfig::PKG_GLOG)
+endif(NOT glog_found)
+```
 
 ## Links
 1. [Cmake Tutorial](https://cmake.org/cmake/help/v3.19/guide/tutorial/)
