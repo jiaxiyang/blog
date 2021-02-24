@@ -131,6 +131,9 @@ if (NOT glog_FOUND)
 endif(NOT glog_found)
 ```
 
+## [组件变量](https://docs.espressif.com/projects/esp-idf/zh_CN/v3.3/api-guides/build-system-cmake.html#preset-component-variables)
+1. `COMPONENT_NAME`：组件名，与组件目录名相同。
+
 ## Links
 1. [Cmake Tutorial](https://cmake.org/cmake/help/v3.19/guide/tutorial/)
 2. [More Modern CMake](https://hsf-training.github.io/hsf-training-cmake-webpage/)
