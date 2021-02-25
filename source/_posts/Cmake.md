@@ -137,7 +137,7 @@ endif(NOT glog_found)
 ## Links
 1. [Cmake Tutorial](https://cmake.org/cmake/help/v3.19/guide/tutorial/)
 2. [Cmake Forum](https://discourse.cmake.org/)
-3. [Professional CMake pdf](https://www.pianshen.com/article/84231056823/)
+3. [Professional CMake pdf](https://github.com/jiaxiyang/documents/blob/master/pcmake.pdf)
 4. [More Modern CMake](https://hsf-training.github.io/hsf-training-cmake-webpage/)
 5. [Cmake Buildsystem](https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html)
 6. [Effective Modern Cmake](https://gist.github.com/mbinna/c61dbb39bca0e4fb7d1f73b0d66a4fd1)
