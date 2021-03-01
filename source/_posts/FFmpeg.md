@@ -69,6 +69,19 @@ $ ffmpeg \
 1. ffprobe也是FFmpeg源码编译后生成的一个可执行程序。ffprobe是一个非常强大的多媒体分析工具，可以从媒体文件或者媒体流中获得你想要了解的媒体信息，比如音频的参数、视频的参数、媒体容器的参数信息等。
 2. `./ffprobe –show_streams output.mp4`
 
+## ffmpeg硬编解码
+1. 当使用FFmpeg进行软编码时，常见的基于CPU进行H.264或H.265编码其相对成本会比较高，CPU编码时的性能也很低，所以出于编码效率及成本考虑，很多时候都会考虑采用硬编码，常见的硬编码包含Nvidia GPU与Intel QSV两种，还有常见的嵌入式平台，如树莓派、瑞芯微等
+
+## ffmpeg流媒体
+1. 随着互联网、移动互联网的发展，人们获取信息的方式开始从纸质媒体转向互联网文字媒体，又从文字媒体转向音视频流媒体。音视频流媒体又称为流媒体，而用于处理流媒体的压缩、录制、编辑操作，开源并强大的工具屈指可数，FFmpeg就是常见的流媒体处理工具。
+2. 流类型：RTMP, RTSP, HTTP, UDP/TCP, HDS, DASH
+
+## ffmpeg filter
+1. FFmpeg除了具有强大的封装/解封装、编/解码功能之外，还包含了一个非常强大的组件——avfilter。avfilter组件经常用于进行多媒体的处理与编辑。例如加水印，画中画，多宫格视频等
+
+## ffmpeg视频采集
+1. 可以使用FFmpeg采集本地的音视频采集设备的数据，然后进行编码、封装、传输等操作
+
 ## Links
 1. [Official Documents](https://ffmpeg.org/documentation.html)
 1. [FFmpeg从入门到精通（书）](http://jxz1.j9p.com/pc/dgsdfhghgh.pdf)
