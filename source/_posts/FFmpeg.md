@@ -24,7 +24,25 @@ $ ffmpeg \
 [输出文件参数] \
 [输出文件]
 ```
+## 工作流程
+1. ffmpeg的主要工作流程相对比较简单，具体如下。
+  - 解封装（Demuxing）
+  - 解码（Decoding）
+  - 编码（Encoding）
+  - 封装（Muxing）
+1. 其中需要经过6个步骤，具体如下。
+  - 读取输入源
+  - 进行音视频的解封装
+  - 解码每一帧音视频数据
+  - 进行音视频的重新封装
+  - 输出到目标
 
+## ffplay
+1. FFmpeg不但可以提供转码、转封装等功能，同时还提供了播放器相关功能，使用FFmpeg的avformat与avcodec，可以播放各种媒体文件或者流。如果想要使用ffplay，那么系统首先需要有SDL来进行ffplay的基础支撑。
+
+## ffprobe
+1. ffprobe也是FFmpeg源码编译后生成的一个可执行程序。ffprobe是一个非常强大的多媒体分析工具，可以从媒体文件或者媒体流中获得你想要了解的媒体信息，比如音频的参数、视频的参数、媒体容器的参数信息等。
+2. `./ffprobe –show_streams output.mp4`
 
 ## Links
 1. [Official Documents](https://ffmpeg.org/documentation.html)
