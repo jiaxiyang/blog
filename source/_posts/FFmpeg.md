@@ -36,6 +36,24 @@ $ ffmpeg \
   - 解码每一帧音视频数据
   - 进行音视频的重新封装
   - 输出到目标
+1. 
+                _______              ______________
+               |       |            |              |
+               | input |  demuxer   | encoded data |   decoder
+               | file  | ---------> | packets      | -----+
+               |_______|            |______________|      |
+                                                          v
+                                                      _________
+                                                     |         |
+                                                     | decoded |
+                                                     | frames  |
+                                                     |_________|
+                ________             ______________       |
+               |        |           |              |      |
+               | output | <-------- | encoded data | <----+
+               | file   |   muxer   | packets      |   encoder
+               |________|           |______________|
+
 
 ## ffplay
 1. FFmpeg不但可以提供转码、转封装等功能，同时还提供了播放器相关功能，使用FFmpeg的avformat与avcodec，可以播放各种媒体文件或者流。如果想要使用ffplay，那么系统首先需要有SDL来进行ffplay的基础支撑。
