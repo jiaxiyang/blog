@@ -1,5 +1,5 @@
 ---
-title: git biset to debug
+title: Git bisect to debug
 date: 2021-03-05 09:51:13
 categories:
 - Tools
