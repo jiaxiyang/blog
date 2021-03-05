@@ -8,6 +8,9 @@ tags:
 - Git
 ---
 
+## Function
+1. Use binary search to find the commit that introduced a bug
+
 ## Command
 
 ```
