@@ -10,6 +10,7 @@ tags:
 
 ## Concepts
 1. CMake is not a build system. It's the build system generator.
+2. add_subdirectory最好只有一层，避免嵌套，只添加顶层文件夹
 
 ## Target and Property
 1. 现代化的CMake是围绕 Target 和 Property 来定义的，并且竭力避免出现变量variable的定义。Variable横行是典型CMake2.8时期的风格。现代版的CMake更像是在遵循OOP的规则，通过target来约束link、compile等相关属性的作用域。
